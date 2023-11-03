@@ -1,0 +1,102 @@
+{% load static %}
+
+<div class="mob-bottom-bar">
+    <div class="ei-bottom-bar-options">
+        {% if request.path == '/' %}
+        <a href="{% url 'index' %}"><img src="{% static '/images/bottom-bar/home-active.svg' %}" alt=""></a>
+        <span class="bottom-bar-active">Home</span>
+        {% elif request.path == '/index/' %}
+        <a href="{% url 'index' %}"><img src="{% static '/images/bottom-bar/home-active.svg' %}" alt=""></a>
+        <span class="bottom-bar-active">Home</span>
+        {% else %}
+        <a href="{% url 'index' %}"><img src="{% static '/images/bottom-bar/home.svg' %}" alt=""></a>
+        <span>Home</span>
+        {% endif %}
+    </div>
+
+    <div class="ei-bottom-bar-options">
+        {% if request.path == '/about_us/' %}
+        <a href="{% url 'about' %}"><img src="{% static '/images/bottom-bar/about-active.svg' %}" alt=""></a>
+        <span class="bottom-bar-active">About</span>
+        {% else %}
+        <a href="{% url 'about' %}"><img src="{% static '/images/bottom-bar/about.svg' %}" alt=""></a>
+        <span>About</span>
+        {% endif %}
+    </div>
+
+    <div class="ei-bottom-bar-options">
+        {% if request.path == '/what_we_do/' %}
+        <a href="{% url 'what_we_do' %}"><img src="{% static '/images/bottom-bar/work-active.svg' %}" alt=""></a>
+        <span class="bottom-bar-active">Work</span>
+        {% else %}
+        <a href="{% url 'what_we_do' %}"><img src="{% static '/images/bottom-bar/work.svg' %}" alt=""></a>
+        <span>Work</span>
+        {% endif %}
+    </div>
+
+    <div class="ei-bottom-bar-options">
+        {% if request.path == '/work-with-us/' %}
+        <a href="{% url 'work_with_us' %}"><img src="{% static '/images/bottom-bar/career-active.svg' %}" alt=""></a>
+        <span class="bottom-bar-active">Careers</span>
+        {% else %}
+        <a href="{% url 'work_with_us' %}"><img src="{% static '/images/bottom-bar/careers.svg' %}" alt=""></a>
+        <span>Careers</span>
+        {% endif %}
+    </div>
+
+    <div class="ei-bottom-bar-options">
+        {% if request.path == '/talk-to-us/' %}
+        <a href="{% url 'contact' %}"><img src="{% static '/images/bottom-bar/contact-active.svg' %}" alt=""></a>
+        <span class="bottom-bar-active">Contact</span>
+        {% else %}
+        <a href="{% url 'contact' %}"><img src="{% static '/images/bottom-bar/contact.svg' %}" alt=""></a>
+        <span>Contact</span>
+        {% endif %}
+    </div>
+</div>
+<div class="footer-div container-fulid">
+    <footer>
+        <div class="foot-divs container">
+            <div class="foot-logo">
+                <img src="{% static '/images/footer/footer-logo.png' %}" alt="">
+            </div>
+            <div class="foot-body">
+                <div class="foot-data">
+                    <a href="{% url 'about' %}">About Us</a>
+                    <a href="{% url 'contact' %}">Contact Us</a>
+                    <!-- <a href="#">Login</a>
+                    <a href="#">Sign Up</a> -->
+                </div>
+                <div class="foot-data">
+                    <a href="{% url 'what_we_do' %}">What we do</a>
+                    <a href="{% url 'work_with_us' %}">Work with us</a>
+                    <a data-bs-toggle="offcanvas" href="#offcanvasRight" role="button" aria-controls="offcanvasRight">Book a call</a>
+                </div>
+                <!-- <div class="foot-data">
+                    <a href="#">Return, Refund & Cancelation</a>
+                    <a href="#">Shipping & delivery policy</a>
+                    <a href="#">Pricing Policy</a>
+                </div> -->
+                <div class="foot-contact">
+                    <div class="foot-address">
+                        <img src="{% static '/images/footer/map.png' %}" alt="">
+                        <p>2004/C, Scheme No 14, Vijay Nagar, Near SBI Chowk, Jabalpur, Madhya Pradesh 482002</p>
+                    </div>
+                    <div class="foot-address">
+                        <img class="phone-foot-img" src="{% static '/images/footer/phone.png' %}" alt="">
+                        <p>+91 9516703294<br>+91 9294581568</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="end-statement container">
+        <div class="terms">
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div class="copyright">
+            <p>© 2023 Engineering Innovations & Research Lab Centre</p>
+        </div>
+    </div>
+</div>
