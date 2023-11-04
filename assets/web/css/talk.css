@@ -1,0 +1,37 @@
+.talk {
+    display: none;
+}
+
+.rotate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rotate img {
+    height: 10rem;
+}
+
+@media only screen and (max-width: 551px) and (min-width: 280px){
+    .talk {
+        display: block;
+    }
+
+    .rotate {
+        display: none;
+    }
+
+    .mobile-talk-to-us-div {
+        margin-bottom: 10rem;
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 550px){
+    .talk {
+        display: block;
+    }
+
+    .rotate {
+        display: none;
+    }
+}
