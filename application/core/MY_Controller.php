@@ -1,5 +1,4 @@
 <?php
-
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class MY_Controller extends CI_Controller
@@ -11,7 +10,7 @@ class MY_Controller extends CI_Controller
 
     /* COMMON :: ADMIN & PUBLIC */
     /* Load */
-    // $this->load->database();
+    $this->load->database();
     // $this->load->config('common/dp_config');
     // $this->load->config('common/dp_language');
     $this->load->library(array('form_validation', 'template'));
@@ -38,14 +37,14 @@ class MY_Controller extends CI_Controller
 //       redirect('auth/login', 'refresh');
 //     } else {
 //       /* Load */
-//       $this->load->config('admin/dp_config');
-//       $this->load->library('admin/page_title');
-//       $this->load->library('admin/breadcrumbs');
+//       // $this->load->config('admin/dp_config');
+//       // $this->load->library('admin/page_title');
+//       // $this->load->library('admin/breadcrumbs');
 //       $this->load->helper('menu');
 //       $this->lang->load(array('admin/main_header', 'admin/main_sidebar', 'admin/actions'));
 
 //       /* Load library function  */
-//       $this->breadcrumbs->unshift(0, $this->lang->line('menu_dashboard'), 'admin/dashboard');
+//       // $this->breadcrumbs->unshift(0, $this->lang->line('menu_dashboard'), 'admin/dashboard');
 
 //       /* Data */
 //       $this->data['title'] = $this->config->item('title');

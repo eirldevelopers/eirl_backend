@@ -1,0 +1,23 @@
+$(document).ready(function () {
+	let contact_table = new DataTable("#contact_us_table");
+	let project_list_table = new DataTable("#project_list_table");
+});
+
+$(document).on('click', '.delete_project', function () {
+	let question = confirm('Do you want to delete project')
+	if (question) {
+		$(this).closest('tr').remove()
+		let delete_id = $(this).attr('delete_id')
+		$.ajax({
+			type: "post",
+			url: base_url + 'admin/project/delete_project',
+			data: {
+				delete_id: delete_id
+			},
+			dataType: "json",
+			success: function (response) {
+
+			}
+		});
+	}
+})

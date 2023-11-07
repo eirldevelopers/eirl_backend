@@ -41,12 +41,17 @@ class Welcome extends Public_Controller
 	}
 	public function load_talk_to_us()
 	{
-		$this->data['css'] = ['style.css', 'about.css'];
-		$this->template->public_render('web/gallery', $this->data);
+		// $this->data['css'] = ['style.css', 'about.css'];
+		// $this->template->public_render('web/gallery', $this->data);
+		$this->load->view('web/talk_to_us');
 	}
 
 	public function work_with_us()
 	{
+
+		// print_r($_POST);
+		// print_r($_FILES);
+		// exit();
 		$name = $this->input->post('name');
 		$number = $this->input->post('number');
 		$email = $this->input->post('email');
@@ -61,10 +66,11 @@ class Welcome extends Public_Controller
 				'mobile' => $number,
 				'email' => $email,
 				'experience' => $experience,
-				'job_profile' => $job_profile,
+				'profile' => $job_profile,
 			];
 
 			$insert_id = $this->welcome_model->save_work_with_us($data);
+			// echo $insert_id;
 			if ($insert_id) {
 				/*-----------------profile_pic----------------------*/
 				$this->load->library('upload');
@@ -95,6 +101,39 @@ class Welcome extends Public_Controller
 				};
 				$this->welcome_model->img_insert($uploaded_files, $insert_id);
 
+				echo json_encode(array('status' => 1, "message" => 'Query send successfully'));
+			} else {
+				echo json_encode(array('status' => 0, "message" => 'Error! please try again later'));
+			}
+		}
+	}
+	public function talk_to_us()
+	{
+
+		// print_r($_POST);
+		// print_r($_FILES);
+		// exit();
+		$name = $this->input->post('name');
+		$number = $this->input->post('phone');
+		$format = $this->input->post('format');
+		$email = $this->input->post('email');
+		$purpose = $this->input->post('purpose');
+		$question = $this->input->post('question');
+
+		if (empty($name) && empty($number) && empty($email) && empty($format) && empty($purpose) && empty($question)) {
+			echo json_encode(array('status' => 0, "message" => 'Please enter all the details'));
+		} else {
+			$data = [
+				'name' => $name,
+				'mobile' => $number,
+				'email' => $email,
+				'format' => $format,
+				'purpose' => $purpose,
+				'question' => $question,
+			];
+
+			$insert_id = $this->welcome_model->save_talk_to_us($data);
+			if ($insert_id) {
 				echo json_encode(array('status' => 1, "message" => 'Query send successfully'));
 			} else {
 				echo json_encode(array('status' => 0, "message" => 'Error! please try again later'));

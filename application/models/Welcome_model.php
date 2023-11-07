@@ -19,6 +19,13 @@ class Welcome_model extends CI_Model
     return  $insert_id;
   }
 
+  public function save_talk_to_us($data)
+  {
+    return ($this->db->insert('talk_to_us', $data));
+    // $insert_id = $this->db->insert_id();
+    // return  $insert_id;
+  }
+
   public function img_insert($data, $id)
   {
     $this->db->update('work_with_us', $data, "id =$id");

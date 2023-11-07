@@ -1,23 +1,23 @@
 <div class="mob-bottom-bar">
   <div class="ei-bottom-bar-options">
-    <a href="./index.html"><img src="<?php echo base_url('/assets/web/images/bottom-bar/home-active.svg') ?>" alt=""></a>
+    <a href="<?php echo base_url('home')  ?>"><img src="<?php echo base_url('assets/images/bottom-bar/home-active.svg') ?>" alt=""></a>
     <span class="bottom-bar-active">Home</span>
   </div>
   <div class="ei-bottom-bar-options">
-    <a href="./about_us.html"><img src="./assets/images/bottom-bar/about.svg" alt=""></a>
+    <a href="<?php echo base_url('about')  ?>"><img src="<?php echo base_url('assets/images/bottom-bar/about.svg') ?>" alt=""></a>
     <span>About</span>
   </div>
 
   <div class="ei-bottom-bar-options">
-    <a href="./what_we_do.html"><img src="<?php echo base_url('/assets/web/images/bottom-bar/work.svg') ?>" alt=""></a>
+    <a href="<?php echo base_url('what_we_do')  ?>"><img src="<?php echo base_url('assets/images/bottom-bar/work.svg') ?>" alt=""></a>
     <span>Work</span>
   </div>
   <div class="ei-bottom-bar-options">
-    <a href="./work-with-us.html"><img src="<?php echo base_url('/assets/web/images/bottom-bar/careers.svg') ?>" alt=""></a>
+    <a href="<?php echo base_url('work_with_us')  ?>"><img src="<?php echo base_url('assets/images/bottom-bar/careers.svg') ?>" alt=""></a>
     <span>Careers</span>
   </div>
   <div class="ei-bottom-bar-options">
-    <a href="./talk-to-us.html"><img src="<?php echo base_url('/assets/web/images/bottom-bar/contact.svg') ?>" alt=""></a>
+    <a href="<?php echo base_url('tak_to_us')  ?>"><img src="<?php echo base_url('assets/images/bottom-bar/contact.svg') ?>" alt=""></a>
     <span>Contact</span>
   </div>
 </div>
@@ -75,14 +75,14 @@
       <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close"><img src="./assets/images/cross.png" alt=""></button>
     </div>
     <div class="ei-talkto-us-body offcanvas-body">
-      <form action="/">
+      <form id="talk_to_us_form" enctype="multipart/form-data">
         <div class="talk-to-us-details">
           <label for="name">Name</label>
           <input type="text" name="name" id="name" placeholder="Enter Full Name" required>
         </div>
         <div class="talk-to-us-details">
           <label for="phone">Phone Number</label>
-          <input type="number" name="phone" id="phone" placeholder="Enter Phone Number" required>
+          <input type="number" name="phone" id="phone" class="only-10-digit" placeholder="Enter Phone Number" required>
         </div>
         <!-- <div class="talk-to-us-details ">
                     <label for="date">Meeting Date and Time</label>
@@ -91,8 +91,8 @@
                 </div> -->
         <div class="talk-to-us-details">
           <label for="format">Meeting Format</label>
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Online / Offline</option>
+          <select class="form-select" aria-label="Default select example" id="format" name="format">
+            <option selected value="">Online / Offline</option>
             <option value="1">Online</option>
             <option value="2">Offline</option>
           </select>
@@ -111,8 +111,8 @@
                 </div> -->
         <div class="talk-to-us-details">
           <label for="purpose">Meeting Purpose/Agenda</label>
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Choose</option>
+          <select class="form-select" aria-label="Default select example" id="purpose" name="purpose">
+            <option selected value="">Choose</option>
             <option value="1">Startup Idea</option>
             <option value="2">Website/App services</option>
             <option value="3">Cyber security</option>
@@ -164,6 +164,7 @@
   })
 </script>
 <script>
+  let base_url = '<?php echo base_url(); ?>';
   $(document).ready(function() {
     var owl = $('.owl-carousel').owlCarousel({
       items: 3, // Set the number of visible items in the carousel
@@ -211,6 +212,40 @@
     // Update the input field with the sanitized input
     $(this).val(sanitizedInput);
   });
+
+  $(document).on('submit', '#work_with_us_form', function(e) {
+    e.preventDefault();
+    var formData = new FormData(this);
+
+    $.ajax({
+      url: base_url + 'welcome/work_with_us',
+      type: 'POST',
+      data: formData,
+      success: function(data) {
+        // alert(data)
+      },
+      cache: false,
+      contentType: false,
+      processData: false
+    });
+  })
+
+  $(document).on('submit', '#talk_to_us_form', function(e) {
+    e.preventDefault();
+    var formData = new FormData(this);
+
+    $.ajax({
+      url: base_url + 'welcome/talk_to_us',
+      type: 'POST',
+      data: formData,
+      success: function(data) {
+        // alert(data)
+      },
+      cache: false,
+      contentType: false,
+      processData: false
+    });
+  })
 </script>
 
 
