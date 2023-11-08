@@ -36,7 +36,7 @@
     </div>
     <div class="ei-contact-foot">
       <button id="desktop-talk-to-us" class="btn ei-contact-foot-btn" data-bs-toggle="offcanvas" href="#offcanvasRight" role="button" aria-controls="offcanvasRight">Talk to us</button>
-      <a href="<?php echo base_url('tak_to_us') ?>" id=" mobile-talk-to-us" class="btn ei-contact-foot-btn">Talk to us</a>
+      <a href="<?php echo base_url('tak_to_us') ?>" id="mobile-talk-to-us" class="btn ei-contact-foot-btn">Talk to us</a>
     </div>
     <div class="what_we_do_work container">
       <h1 data-aos="fade-up">Explore some of our work</h1>

@@ -124,7 +124,7 @@
   <div class="ei-talkto-us offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="ei-talkto-us-head offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasRightLabel">Talk to us</h5>
-      <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close"><img src="./assets/images/cross.png" alt=""></button>
+      <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close"><img  src="<?php echo base_url('assets/web/images/cross.png') ?>" alt=""></button>
     </div>
     <div class="ei-talkto-us-body offcanvas-body">
       <form id="talk_to_us_form" enctype="multipart/form-data">
@@ -189,6 +189,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="<?php echo base_url('assets/web/js/aos.js') ?>"></script>
 <script src="<?php echo base_url('assets/web/js/about-scroll.js') ?>"></script>
 <script src="<?php echo base_url('assets/web/js/home-vid-animation.js') ?>"></script>

@@ -7,9 +7,9 @@
       <h1 data-aos="fade-down">The Buzz</h1>
     </div>
     <div class="gallery">
-      <button type="button" class="gallery-active-btn">X</button>
-      <button type="button" class="gallery-prev-btn">Prev</button>
-      <button type="button" class="gallery-next-btn">Next</button>
+      <button type="button" class="gallery-active-btn"><img src="<?php echo base_url('assets/web/images/gallery_img/controls/close.png')?>" alt=""></button>
+      <button type="button" class="gallery-prev-btn"><img src="<?php echo base_url('assets/web/images/gallery_img/controls/navigate.png')?>" alt=""></button>
+      <button type="button" class="gallery-next-btn"><img src="<?php echo base_url('assets/web/images/gallery_img/controls/navigate.png')?>" alt=""></button>
       <div class="gallery-img">
         <img src="<?php echo base_url('assets/web/images/gallery_img/1.png') ?>" alt="" data-value="1" data-aos="fade-up">
       </div>

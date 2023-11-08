@@ -447,16 +447,13 @@ padding: 0 !important;
 
 .gallery-active-btn {
     position: fixed;
+    background: transparent;
     right: 5%;
     top: 5%;
     display: none;
     z-index: 1600;
     border: none;
     border-radius: 50%;
-    color: #fff;
-    height: 2rem;
-    width: 2rem;
-    background: linear-gradient(90deg, rgba(3, 219, 246, 0.70) 0%, rgba(15, 51, 255, 0.60) 100%);
 }
 
 .gallery-next-btn {
@@ -470,6 +467,7 @@ padding: 0 !important;
     color: #fff;
     font-weight: 700;
     border: none;
+    transform: rotate(90deg);
 }
 
 .gallery-prev-btn {
@@ -483,6 +481,7 @@ padding: 0 !important;
     color: #fff;
     font-weight: 700;
     border: none;
+    transform: rotate(-90deg);
 }
 
 .btn-hide {
