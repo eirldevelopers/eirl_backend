@@ -1,24 +1,75 @@
 <div class="mob-bottom-bar">
   <div class="ei-bottom-bar-options">
-    <a href="<?php echo base_url('home')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/home-active.svg') ?>" alt=""></a>
+    <?php
+    if ($this->router->fetch_method() == 'index') {
+    ?>
+      <a href="<?php echo base_url('home')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/home-active.svg') ?>" alt=""></a>
+    <?php
+    } else {
+    ?>
+      <a href="<?php echo base_url('home')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/home.svg') ?>" alt=""></a>
+    <?php
+    }
+    ?>
+    <a href="<?php echo base_url('home')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/' . $this->router->fetch_method() == 'index' ? 'home-active.svg' : 'home.svg') ?>" alt=""></a>
     <span class="<?php echo $this->router->fetch_method() == 'index' ? 'bottom-bar-active' : ''; ?>">Home</span>
   </div>
 
   <div class="ei-bottom-bar-options">
-    <a href="<?php echo base_url('about')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/about.svg') ?>" alt=""></a>
+    <?php
+    if ($this->router->fetch_method() == 'load_about') {
+    ?>
+      <a href="<?php echo base_url('about')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/about-active.svg') ?>" alt=""></a>
+    <?php
+    } else {
+    ?>
+      <a href="<?php echo base_url('about')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/about.svg') ?>" alt=""></a>
+    <?php
+    }
+    ?>
     <span class="<?php echo $this->router->fetch_method() == 'load_about' ? 'bottom-bar-active' : ''; ?>">About</span>
   </div>
 
   <div class="ei-bottom-bar-options">
-    <a href="<?php echo base_url('what_we_do')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/work.svg') ?>" alt=""></a>
+    <?php
+    if ($this->router->fetch_method() == 'load_what_we_do') {
+    ?>
+      <a href="<?php echo base_url('what_we_do')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/work-active.svg') ?>" alt=""></a>
+    <?php
+    } else {
+    ?>
+      <a href="<?php echo base_url('what_we_do')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/work.svg') ?>" alt=""></a>
+    <?php
+    }
+    ?>
     <span class="<?php echo $this->router->fetch_method() == 'load_what_we_do' ? 'bottom-bar-active' : ''; ?>">Work</span>
   </div>
   <div class="ei-bottom-bar-options">
-    <a href="<?php echo base_url('work_with_us')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/careers.svg') ?>" alt=""></a>
+    <?php
+    if ($this->router->fetch_method() == 'load_work_with_us') {
+    ?>
+      <a href="<?php echo base_url('work_with_us')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/career-active.svg') ?>" alt=""></a>
+    <?php
+    } else {
+    ?>
+      <a href="<?php echo base_url('work_with_us')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/careers.svg') ?>" alt=""></a>
+    <?php
+    }
+    ?>
     <span class="<?php echo $this->router->fetch_method() == 'load_work_with_us' ? 'bottom-bar-active' : ''; ?>">Careers</span>
   </div>
   <div class="ei-bottom-bar-options">
-    <a href="<?php echo base_url('tak_to_us')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/contact.svg') ?>" alt=""></a>
+    <?php
+    if ($this->router->fetch_method() == 'load_talk_to_us') {
+    ?>
+      <a href="<?php echo base_url('tak_to_us')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/contact-active.svg') ?>" alt=""></a>
+    <?php
+    } else {
+    ?>
+      <a href="<?php echo base_url('tak_to_us')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/contact.svg') ?>" alt=""></a>
+    <?php
+    }
+    ?>
     <span class="<?php echo $this->router->fetch_method() == 'load_talk_to_us' ? 'bottom-bar-active' : ''; ?>">Contact</span>
   </div>
 </div>
