@@ -1,24 +1,25 @@
 <div class="mob-bottom-bar">
   <div class="ei-bottom-bar-options">
-    <a href="<?php echo base_url('home')  ?>"><img src="<?php echo base_url('assets/images/bottom-bar/home-active.svg') ?>" alt=""></a>
-    <span class="bottom-bar-active">Home</span>
-  </div>
-  <div class="ei-bottom-bar-options">
-    <a href="<?php echo base_url('about')  ?>"><img src="<?php echo base_url('assets/images/bottom-bar/about.svg') ?>" alt=""></a>
-    <span>About</span>
+    <a href="<?php echo base_url('home')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/home-active.svg') ?>" alt=""></a>
+    <span class="<?php echo $this->router->fetch_method() == 'index' ? 'bottom-bar-active' : ''; ?>">Home</span>
   </div>
 
   <div class="ei-bottom-bar-options">
-    <a href="<?php echo base_url('what_we_do')  ?>"><img src="<?php echo base_url('assets/images/bottom-bar/work.svg') ?>" alt=""></a>
-    <span>Work</span>
+    <a href="<?php echo base_url('about')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/about.svg') ?>" alt=""></a>
+    <span class="<?php echo $this->router->fetch_method() == 'load_about' ? 'bottom-bar-active' : ''; ?>">About</span>
+  </div>
+
+  <div class="ei-bottom-bar-options">
+    <a href="<?php echo base_url('what_we_do')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/work.svg') ?>" alt=""></a>
+    <span class="<?php echo $this->router->fetch_method() == 'load_what_we_do' ? 'bottom-bar-active' : ''; ?>">Work</span>
   </div>
   <div class="ei-bottom-bar-options">
-    <a href="<?php echo base_url('work_with_us')  ?>"><img src="<?php echo base_url('assets/images/bottom-bar/careers.svg') ?>" alt=""></a>
-    <span>Careers</span>
+    <a href="<?php echo base_url('work_with_us')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/careers.svg') ?>" alt=""></a>
+    <span class="<?php echo $this->router->fetch_method() == 'load_work_with_us' ? 'bottom-bar-active' : ''; ?>">Careers</span>
   </div>
   <div class="ei-bottom-bar-options">
-    <a href="<?php echo base_url('tak_to_us')  ?>"><img src="<?php echo base_url('assets/images/bottom-bar/contact.svg') ?>" alt=""></a>
-    <span>Contact</span>
+    <a href="<?php echo base_url('tak_to_us')  ?>"><img src="<?php echo base_url('assets/web/images/bottom-bar/contact.svg') ?>" alt=""></a>
+    <span class="<?php echo $this->router->fetch_method() == 'load_talk_to_us' ? 'bottom-bar-active' : ''; ?>">Contact</span>
   </div>
 </div>
 <div class="footer-div container-fulid">
@@ -130,6 +131,9 @@
     </div>
   </div>
 </div>
+<script>
+  let base_url = '<?php echo base_url(); ?>';
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
@@ -164,7 +168,6 @@
   })
 </script>
 <script>
-  let base_url = '<?php echo base_url(); ?>';
   $(document).ready(function() {
     var owl = $('.owl-carousel').owlCarousel({
       items: 3, // Set the number of visible items in the carousel
@@ -221,8 +224,20 @@
       url: base_url + 'welcome/work_with_us',
       type: 'POST',
       data: formData,
-      success: function(data) {
-        // alert(data)
+      dataType: 'json',
+      success: function(response) {
+        if (response.status) {
+          $("#talk_to_us_form")[0].reset()
+          Swal.fire({
+            text: response.message,
+            icon: "success"
+          });
+        } else {
+          Swal.fire({
+            text: response.message,
+            icon: "error"
+          });
+        }
       },
       cache: false,
       contentType: false,
@@ -238,8 +253,20 @@
       url: base_url + 'welcome/talk_to_us',
       type: 'POST',
       data: formData,
-      success: function(data) {
-        // alert(data)
+      dataType: 'json',
+      success: function(response) {
+        if (response.status) {
+          $("#talk_to_us_form")[0].reset()
+          Swal.fire({
+            text: response.message,
+            icon: "success"
+          });
+        } else {
+          Swal.fire({
+            text: response.message,
+            icon: "error"
+          });
+        }
       },
       cache: false,
       contentType: false,

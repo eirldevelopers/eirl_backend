@@ -12,7 +12,7 @@ function remove_class() {
 }
 
 gallery_images.forEach(img => {
-    img.addEventListener("click", function(event) {
+    img.addEventListener("click", function (event) {
         remove_class();
         gallery_close.classList.add("btn-hide");
         next_btn.classList.add("btn-hide");
@@ -23,10 +23,10 @@ gallery_images.forEach(img => {
         currentImage = img;
         let dataValue = Number(img.children[0].getAttribute("data-value"));
 
-        prev_btn.addEventListener("click", function(event) {
+        prev_btn.addEventListener("click", function (event) {
             let new_num = dataValue - 1;
             if (new_num >= 1) {
-                currentImage.children[0].src = "./assets/images/gallery_img/" + new_num + ".png";
+                currentImage.children[0].src = base_url + "assets/web/images/gallery_img/" + new_num + ".png";
                 next_btn.disabled = false; // Enable the "Next" button
             } else {
                 prev_btn.disabled = true; // Disable the "Previous" button
@@ -34,10 +34,10 @@ gallery_images.forEach(img => {
             dataValue = new_num;
         });
 
-        next_btn.addEventListener("click", function(event) {
+        next_btn.addEventListener("click", function (event) {
             let new_num = dataValue + 1;
             if (new_num <= gallery_images.length) {
-                currentImage.children[0].src = "./assets/images/gallery_img/" + new_num + ".png";
+                currentImage.children[0].src = base_url + "assets/web/images/gallery_img/" + new_num + ".png";
                 prev_btn.disabled = false; // Enable the "Previous" button
             } else {
                 next_btn.disabled = true; // Disable the "Next" button
@@ -45,7 +45,7 @@ gallery_images.forEach(img => {
             dataValue = new_num;
         });
 
-        gallery_close.addEventListener("click", function(event) {
+        gallery_close.addEventListener("click", function (event) {
             // gallery_close.classList.remove("btn-hide");
             // next_btn.classList.remove("btn-hide");
             // prev_btn.classList.remove("btn-hide");

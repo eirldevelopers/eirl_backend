@@ -51,11 +51,11 @@
         </div>
       </div>
     </div>
-    <div class="ei-work-form row">
-      <div class="ei-about-head head-1" data-aos="fade-up">
-        <h1>Apply now</h1>
-      </div>
-      <form id="work_with_us_form" enctype="multipart/form-data">
+    <form id="work_with_us_form" enctype="multipart/form-data">
+      <div class="ei-work-form row">
+        <div class="ei-about-head head-1" data-aos="fade-up">
+          <h1>Apply now</h1>
+        </div>
         <div class="ei-work-form-data col-lg-6 col-md-6">
           <div class="ei-work-form-details">
             <label for="name">Name</label>
@@ -102,6 +102,6 @@
         <div class="ei-work-form-submit">
           <button class="btn ei-contact-foot-btn form-submit-btn">Submit</button>
         </div>
-      </form>
-    </div>
+      </div>
   </div>
+  </form>

@@ -23,7 +23,7 @@
       <div class="one ei-video-row row">
         <div class="ei-video col-lg-9 col-md-9">
           <div class="video-container">
-            <video loop style="pointer-events: none;" class="video" src="<?php echo base_url('/assets/web/videos-compressed/1-1.m4v') ?>" controls="false"></video>
+            <video loop style="pointer-events: none;" class="video" src="<?php echo base_url('assets/web/videos-compressed/1-1.m4v') ?>" controls="false"></video>
           </div>
         </div>
         <div class="ei-data col-lg-3 col-md-3">
@@ -77,7 +77,7 @@
       <div class="five ei-video-row row">
         <div class="ei-video col-lg-9 col-md-9">
           <div class="video-container">
-            <video loop style="pointer-events: none;" class="video" src="<?php echo base_url('assets/videos-compressed/6-1.m4v') ?>" controls="false"></video>
+            <video loop style="pointer-events: none;" class="video" src="<?php echo base_url('assets/web/videos-compressed/6-1.m4v') ?>" controls="false"></video>
           </div>
         </div>
         <div class="ei-data col-lg-3 col-md-3">
