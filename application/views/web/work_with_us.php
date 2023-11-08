@@ -1,5 +1,5 @@
 <div class="mobile-logo fixed-top">
-  <a href="./index.html"><img src="./assets/images/logo.png" alt=""></a>
+  <a href="<?php echo base_url('home') ?>"><img src="<?php echo base_url('assets/web/images/logo.png') ?>" alt=""></a>
 </div>
 <section class="ei-about-section">
   <div class="ei-about-div container">
