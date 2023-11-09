@@ -32,20 +32,28 @@
           <h3>Our Socials</h3>
           <div class="social-icons-row row">
             <div class="social-icons col-lg-5">
+            <a class="social-links" href="https://www.instagram.com/engineeringinnovation.official/">
               <img src="<?php echo base_url('assets/web/images/work-with-us/social/instagram.svg') ?>" alt="">
-              <span>Add Link Here</span>
+              <span>@ei_official</span>
+            </a>
             </div>
             <div class="social-icons col-lg-5">
+            <a class="social-links" href="https://www.facebook.com/eirlpl">
               <img src="<?php echo base_url('assets/web/images/work-with-us/social/facebook.svg') ?>" alt="">
-              <span>Add Link Here</span>
+              <span>@eirl</span>
+            </a>
             </div>
             <div class="social-icons col-lg-5">
+            <a class="social-links" href="https://www.linkedin.com/company/eirl/">
               <img src="<?php echo base_url('assets/web/images/work-with-us/social/linkedin.svg') ?>" alt="">
-              <span>Add Link Here</span>
+              <span>EIRL</span>
+            </a>
             </div>
             <div class="social-icons col-lg-5">
+            <a class="social-links" href="https://wa.me/9516703294">
               <img src="<?php echo base_url('assets/web/images/work-with-us/social/whatsapp.svg') ?>" alt="">
-              <span>Add Link Here</span>
+              <span>Chat with us</span>
+            </a>
             </div>
           </div>
         </div>
@@ -92,12 +100,12 @@
           </div>
         </div>
         <div class="ei-work-form-data col-lg-6 col-md-6">
-          <div class="ei-work-form-details">
-            <label class="resume-class" for="cv">Upload Resume/CV
-              <div class="resume-upload"><span>Choose File</span></div>
+        <div class="ei-work-form-details">
+            <label class="resume-class" for="job_cv">Upload Resume/CV
+            <div class="resume-upload"><span class="file_name_class">Choose File</span></div>
             </label>
-            <input style="display: none;" type="file" name="cv" id="cv" placeholder="Choose File" required>
-          </div>
+            <input style="display: none;" accept="image/*, .pdf" type="file" name="job_cv" id="job_cv" placeholder="Choose File" required>
+        </div>
         </div>
         <div class="ei-work-form-submit">
           <button class="btn ei-contact-foot-btn form-submit-btn">Submit</button>

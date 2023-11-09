@@ -162,6 +162,15 @@ padding: 0 !important;
     margin-bottom: 2rem
 }
 
+.social-links {
+    display: flex;
+    gap: 0.5rem;
+    text-decoration: none;
+    align-items: center;
+    color: #000;
+}
+
+
 .social-icons img {
     height: 3rem;
 }
