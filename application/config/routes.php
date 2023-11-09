@@ -66,3 +66,6 @@ $route['add_blog'] = 'admin/blogs/add_blog';
 $route['add_blog'] = 'admin/blogs/add_blog';
 $route['edit_blog'] = 'admin/blogs/edit_blog';
 $route['delete_blog'] = 'admin/blogs/delete_blog';
+$route['terms_and_conditions'] = 'welcome/terms_and_conditions';
+$route['privacy_policy'] = 'welcome/privacy_policy';
+$route['return_policy'] = 'welcome/return_policy';

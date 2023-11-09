@@ -197,6 +197,7 @@
 <script src="<?php echo base_url('assets/web/js/digits.js') ?>"></script>
 <script src="<?php echo base_url('assets/web/js/preloader.js') ?>"></script>
 <script src="<?php echo base_url('assets/web/js/gallery.js') ?>"></script>
+<script src="<?php echo base_url('assets/web/js/cv.js') ?>"></script>
 <script>
   let index_nav = document.querySelector(".ei-nav")
 
