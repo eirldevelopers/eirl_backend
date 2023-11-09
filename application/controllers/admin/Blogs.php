@@ -107,13 +107,13 @@ class Blogs extends Admin_Controller
         // $this->page_title->push(lang('menu_project_list'));
         // $this->data['pagetitle'] = $this->page_title->show();
         $this->data['blog_list'] = $this->blog_model->get_blog_list();
-        $this->template->admin_render('admin/blog/index',$this->data);
+        $this->template->admin_render('admin/blog/index', $this->data);
     }
 
     public function add_blog()
     {
         // $this->page_title->push(lang('menu_projects'));
-            // $this->data['pagetitle'] = $this->page_title->show();
+        // $this->data['pagetitle'] = $this->page_title->show();
 
 
         // if (!$this->ion_auth->logged_in()) {
@@ -185,6 +185,86 @@ class Blogs extends Admin_Controller
         } else {
             //print_r($this->data['categories']); die;
             $this->template->admin_render('admin/blog/add', $this->data);
+        }
+    }
+    public function edit_blog($id)
+    {
+
+        // echo $id;
+        // exit();
+        // $this->page_title->push(lang('menu_projects'));
+        // $this->data['pagetitle'] = $this->page_title->show();
+
+
+        // if (!$this->ion_auth->logged_in()) {
+        //   // redirect them to the login page
+        //   redirect('auth/login', 'refresh');
+        // }
+        //     /* Validate form input */
+
+        $validation = [
+            [
+                'field' => 'blog_name',
+                'label' => 'Blog Name',
+                'rules' => 'required|trim',
+                'errors' => ['required' => 'Please enter %s.']
+            ],
+            [
+                'field' => 'blog_desc',
+                'label' => 'Blog Description',
+                'rules' => 'required',
+                'errors' => ['required' => 'Blog Description is required.']
+            ],
+        ];
+
+        $this->form_validation->set_rules($validation);
+        $uploaded_files = array();
+        if ($this->form_validation->run() == true) {
+
+            $additional_data = [
+                'blog_name' => $this->input->post('blog_name') ? $this->input->post('blog_name') : "",
+                'blog_description' => $this->input->post('blog_desc') ? $this->input->post('blog_desc') : "",
+            ];
+
+            $update_id = $this->blog_model->edit_blog($additional_data, $id);
+            if ($update_id) {
+                /*-----------------profile_pic----------------------*/
+                if (!empty($_FILES)) {
+                    $this->load->library('upload');
+                    foreach ($_FILES as $field_name => $file_data) {
+                        $blog_img_path = './uploads';
+                        $file = 'New' . time() . rand(100, 999);
+                        $config = array(
+                            'upload_path'       => $blog_img_path,
+                            'allowed_types' => 'png|jpg|jpeg',
+                            'file_name'         => $file,
+                            'overwrite'         => FALSE,
+                            'remove_spaces'     => TRUE,
+                            'quality'           => '100%',
+                        );
+                        $this->upload->initialize($config);
+                        // print_r($file_data);
+                        if (!empty($file_data['name'])) {
+                            $_FILES[$field_name] = $file_data;
+                            if ($this->upload->do_upload($field_name)) {
+                                $uploaded_files[$field_name] = $this->upload->data()['file_name'];
+                            } else {
+                                $error[$field_name] = $this->upload->display_errors();
+                            }
+                        }
+                    };
+                    $this->blog_model->blog_img_insert($uploaded_files, $id);
+                }
+                $this->session->set_flashdata('message', ['1', 'Blog edit successfully.']);
+                redirect('edit_blog/' . $id, 'refresh');
+            } else {
+                $this->session->set_flashdata('message', ['0', 'Blog edit failed.']);
+                redirect('edit_blog/' . $id, 'refresh');
+            }
+        } else {
+            //print_r($this->data['categories']); die;
+            $this->data['blog'] = $this->blog_model->get_single_blog($id);
+            $this->template->admin_render('admin/blog/edit', $this->data);
         }
     }
     //   public function project_list()
@@ -283,15 +363,15 @@ class Blogs extends Admin_Controller
     //     }
     //   }
 
-    //   public function delete_project()
-    //   {
-    //     $delete_id = $this->input->post('delete_id');
-    //     if ($delete_id) {
-    //       if ($this->project_model->delete_project($delete_id)) {
-    //         echo json_encode(array("status" => 1, "message" => "Project delete successfully"));
-    //       } else {
-    //         echo json_encode(array("status" => 0, "message" => "Error ! Please try again  later"));
-    //       }
-    //     }
-    //   }
+      public function delete_blog()
+      {
+        $delete_id = $this->input->post('delete_id');
+        if ($delete_id) {
+          if ($this->blog_model->delete_blog($delete_id)) {
+            echo json_encode(array("status" => 1, "message" => "Blog delete successfully"));
+          } else {
+            echo json_encode(array("status" => 0, "message" => "Error ! Please try again  later"));
+          }
+        }
+      }
 }

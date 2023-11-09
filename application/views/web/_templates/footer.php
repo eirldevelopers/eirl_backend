@@ -83,18 +83,18 @@
         <div class="foot-data">
           <a href="#">About Us</a>
           <a href="#">Contact Us</a>
-          <a href="#">Login</a>
-          <a href="#">Sign Up</a>
+          <!-- <a href="#">Login</a> -->
+          <!-- <a href="#">Sign Up</a> -->
         </div>
         <div class="foot-data">
           <a href="#">What we do</a>
           <a href="#">Work with us</a>
-          <a href="#">Book a call</a>
+          <!-- <a href="#">Book a call</a> -->
         </div>
         <div class="foot-data">
           <a href="#">Return, Refund & Cancelation</a>
-          <a href="#">Shipping & delivery policy</a>
-          <a href="#">Pricing Policy</a>
+          <!-- <a href="#">Shipping & delivery policy</a> -->
+          <!-- <a href="#">Pricing Policy</a> -->
         </div>
         <div class="foot-contact">
           <div class="foot-address">

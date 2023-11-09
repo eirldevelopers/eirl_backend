@@ -36,7 +36,7 @@ class Blog_model extends CI_Model
       return FALSE;
     }
   }
-  public function get_project_details($id)
+  public function get_single_blog($id)
   {
     $this->db->select('*');
     $this->db->from('blogs');
@@ -49,7 +49,7 @@ class Blog_model extends CI_Model
     }
   }
 
-  public function update_project($data, $id)
+  public function edit_blog($data, $id)
   {
     return $this->db->update('blogs', $data, "id =$id");
   }
@@ -59,7 +59,7 @@ class Blog_model extends CI_Model
     return $this->db->update('blogs', $data, "id =$id");
   }
 
-  public function delete_project($id)
+  public function delete_blog($id)
   {
     return $this->db->delete('blogs', array('id' => $id));
   }

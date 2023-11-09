@@ -28,7 +28,7 @@
 
           <div class="container mt-1">
             <div class="card p-3">
-              <table class="table table-bordered table-sm" id="blog_list_table">
+              <table class="table table-bordered table-sm" id="contact_us_table">
                 <thead>
                   <tr>
                     <th scope="col">S.no.</th>

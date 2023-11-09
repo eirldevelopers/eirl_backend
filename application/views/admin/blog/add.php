@@ -28,14 +28,15 @@
               <div class="row">
                 <div class="form-group col-lg-4">
                   <label for="blog_name">Project Name( <span class="text-danger">required *</span>)</label>
-                  <input type="text" class="form-control" id="blog_name" name="blog_name">
+                  <input type="text" class="form-control" id="blog_name" name="blog_name" required>
                   <?php echo form_error('blog_name') ?>
                 </div>
                 <div class="form-group col-lg-12">
                   <label for="blog_desc">Project Description( <span class="text-danger">required *</span>)</label>
-                  <textarea class="form-control word-limit" id="blog_desc" name="blog_desc" rows="5"></textarea>
+                  <textarea class="form-control " id="blog_desc" name="blog_desc" rows="5" required></textarea>
                   <?php echo form_error('blog_desc') ?>
-                  <p class="text-danger">Max Character Count : 600 Character </p>
+                  <!-- word-limit -->
+                  <!-- <p class="text-danger">Max Character Count : 600 Character </p> -->
                 </div>
                 <div class="form-group col-lg-4">
                   <label for="blog_image">Project Cover Image ( <span class="text-danger">required *</span>)</label>

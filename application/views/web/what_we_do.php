@@ -40,44 +40,49 @@
     </div>
     <div class="what_we_do_work container" id="our_blogs">
       <h1 data-aos="fade-up">Explore some of our work</h1>
-      <div class="what_do_do_work_row row">
-        <div class="col-lg-7 col-md-7 col-sm-12" data-aos="slide-right">
-          <div class="what_we_do_work_img">
-            <img src="<?php echo base_url('assets/web/images/blogs/party_people.png') ?>" alt="">
-          </div>
-        </div>
-        <div class="col-lg-5 col-md-5 col-sm-12" data-aos="slide-left">
-          <div class="what_we_do_work_data">
-            <h1>Party People</h1>
-            <p class="what_do_do_work_para">Are you ready to paint the town red and dance the night away? Look no further than Party People, your ultimate destination for all things fun and fabulous! At Party People, we're the heartbeat of the city's nightlife, connecting vibrant and adventurous souls with the most exciting parties and events in town. Whether you're a seasoned partygoer or someone looking to spice up your social calendar, we've got you covered. Our platform is the go-to hub for the hip and young crowd, bringing together a community of like-minded individuals who share a passion for music, dancing, and unforgettable experiences. With our user-friendly app, you can effortlessly discover the latest happenings, from trendy clubs and music festivals to exclusive rooftop soirées and underground raves.</p>
-          </div>
-        </div>
-      </div>
-      <div class="what_do_do_work_row mob-2-data row">
-        <div class="col-lg-5 col-md-5 col-sm-12" data-aos="slide-right">
-          <div class="what_we_do_work_data">
-            <h1>Autofind</h1>
-            <p class="what_do_do_work_para">MCG Autofind is your one-stop destination for all your automotive needs. Whether you're in search of expert consultations for your vehicle or looking to explore a wide range of automotive products and services, MCG Autofind has you covered. This platform seamlessly combines automobile consultation booking with an extensive e-commerce marketplace, making it easier than ever to take care of your automotive needs. Looking to schedule a consultation with a trusted mechanic or automotive expert? MCG Autofind provides a user-friendly booking system that connects you with experienced professionals who can answer your questions, diagnose issues, and provide guidance on vehicle maintenance and repairs.</p>
-          </div>
-        </div>
-        <div class="col-lg-7 col-md-7 col-sm-12" data-aos="slide-left">
-          <div class="what_we_do_work_img">
-            <img src="<?php echo base_url('assets/web/images/blogs/autofind.png') ?>" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="what_do_do_work_row row">
-        <div class="col-lg-7 col-md-7 col-sm-12" data-aos="slide-right">
-          <div class="what_we_do_work_img">
-            <img src="<?php echo base_url('assets/web/images/blogs/taskhive.png') ?>" alt="">
-          </div>
-        </div>
-        <div class="col-lg-5 col-md-5 col-sm-12" data-aos="slide-left">
-          <div class="what_we_do_work_data">
-            <h1>Taskhive</h1>
-            <p class="what_do_do_work_para">Taskhive is a forward-thinking and adaptable company that excels in offering a comprehensive range of services in three crucial domains: Human Resources (HR), Business Process Outsourcing (BPO), and Web Development. Our core mission revolves around assisting businesses of all sizes and industries in achieving their goals and reaching their full potential. In the realm of HR, Taskhive takes pride in being your strategic partner in talent acquisition and management. We possess the expertise to source, assess, and onboard top-tier talent, ensuring that your organization is staffed with the right individuals to drive growth and innovation. Our HR consulting services go beyond recruitment, focusing on creating a thriving workplace culture and optimizing HR processes to improve overall efficiency.</p>
-          </div>
-        </div>
-      </div>
+
+      <?php
+      // print_r($blogs);
+      if ($blogs) {
+        $i = 1;
+        foreach ($blogs as $blog) {
+          if ($i % 2 != 0) {
+      ?>
+            <div class="what_do_do_work_row row">
+              <div class="col-lg-7 col-md-7 col-sm-12" data-aos="slide-right">
+                <div class="what_we_do_work_img">
+                  <img src="<?php echo base_url('uploads/'.$blog->blog_image) ?>" alt="">
+                </div>
+              </div>
+              <div class="col-lg-5 col-md-5 col-sm-12" data-aos="slide-left">
+                <div class="what_we_do_work_data">
+                  <h1><?php echo $blog->blog_name ?></h1>
+                  <p class="what_do_do_work_para"><?php echo $blog->blog_description ?></p>
+                </div>
+              </div>
+            </div>
+          <?php
+
+          } else {
+          ?>
+            <div class="what_do_do_work_row mob-2-data row">
+              <div class="col-lg-5 col-md-5 col-sm-12" data-aos="slide-right">
+                <div class="what_we_do_work_data">
+                  <h1><?php echo $blog->blog_name ?></h1>
+                  <p class="what_do_do_work_para"><?php echo $blog->blog_description ?></p>
+                </div>
+              </div>
+              <div class="col-lg-7 col-md-7 col-sm-12" data-aos="slide-left">
+                <div class="what_we_do_work_img">
+                  <img src="<?php echo base_url('uploads/'.$blog->blog_image) ?>" alt="">
+                </div>
+              </div>
+            </div>
+      <?php
+          }
+          $i++;
+        }
+      }
+      ?>
     </div>
   </div>

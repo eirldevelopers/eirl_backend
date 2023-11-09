@@ -69,4 +69,16 @@ class Welcome_model extends CI_Model
   {
     return $this->db->delete('project_details', array('id' => $id));
   }
+
+  public function get_blogs()
+  {
+    $this->db->select('*');
+    $this->db->from('blogs');
+    $query = $this->db->get();
+    if ($query->num_rows() > 0) {
+      return $query->result();
+    } else {
+      return FALSE;
+    }
+  }
 }

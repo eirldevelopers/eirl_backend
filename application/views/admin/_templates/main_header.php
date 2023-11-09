@@ -42,7 +42,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <div class="logo-box">
         <a href="#" class="logo text-center">
             <span class="logo-lg">
-                <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="" height="60" style="border: 1px solid #FFF;">
+                <img src="<?php echo base_url('assets/web/images/logo.png'); ?>" alt="" height="40px" style="border: 1px solid #FFF;">
             </span>
         </a>
     </div>

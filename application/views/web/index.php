@@ -231,36 +231,22 @@
     </div>
     <div class="ei-our-work-body">
       <div class="row ei-why-us">
-        <!-- <div class="col-lg-4 col-md-4 col-sm-6 ei-why-us-wrappar">
-          <div class="ei-our-work-body-img">
-            <img src="<?php echo base_url('assets/web/images/our_work.png') ?>" alt="" />
-          </div>
-        </div> -->
-        <!-- <div class="col-lg-4 col-md-4 col-sm-6 ei-why-us-wrappar">
-          <div class="ei-our-work-body-img">
-            <img src="<?php echo base_url('assets/web/images/our_work.png') ?>" alt="" />
-          </div>
-        </div> -->
-        <!-- <div class="col-lg-4 col-md-4 col-sm-6 ei-why-us-wrappar">
-          <div class="ei-our-work-body-img">
-            <img src="<?php echo base_url('assets/web/images/our_work.png') ?>" alt="" />
-          </div>
-        </div> -->
-        <div class="col-lg-4 col-md-4 col-sm-6 ei-why-us-wrappar">
-          <div class="ei-our-work-body-img">
-            <img src="<?php echo base_url('assets/web/images/blogs/party_people.png') ?>" alt="" />
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 ei-why-us-wrappar">
-          <div class="ei-our-work-body-img">
-            <img src="<?php echo base_url('assets/web/images/blogs/autofind.png') ?>" alt="" />
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 ei-why-us-wrappar">
-          <div class="ei-our-work-body-img">
-            <img src="<?php echo base_url('assets/web/images/blogs/taskhive.png') ?>" alt="" />
-          </div>
-        </div>
+        <?php
+        // print_r($blogs);
+        if ($blogs) {
+          $i = 1;
+          foreach ($blogs as $blog) {
+        ?>
+            <div class="col-lg-4 col-md-4 col-sm-6 ei-why-us-wrappar">
+              <div class="ei-our-work-body-img">
+                <img src="<?php echo base_url('uploads/'.$blog->blog_image) ?>" alt="" />
+              </div>
+            </div>
+        <?php
+
+          }
+        }
+        ?>
       </div>
       <div class="ei-our-work-body-view-all">
         <a href="<?php echo base_url('what_we_do') ?>#our_blogs"><span class="view-all">View All</span></a>

@@ -17,6 +17,7 @@ class Welcome extends Public_Controller
 	public function index()
 	{
 		$this->data['css'] = ['style.css'];
+		$this->data['blogs'] = $this->welcome_model->get_blogs();
 		$this->template->public_render('web/index', $this->data);
 	}
 	public function load_about()
@@ -32,6 +33,7 @@ class Welcome extends Public_Controller
 	public function load_what_we_do()
 	{
 		$this->data['css'] = ['style.css', 'about.css'];
+		$this->data['blogs'] = $this->welcome_model->get_blogs();
 		$this->template->public_render('web/what_we_do', $this->data);
 	}
 	public function load_work_with_us()
