@@ -74,15 +74,12 @@ class Welcome extends Public_Controller
 			if ($insert_id) {
 				/*-----------------profile_pic----------------------*/
 				$this->load->library('upload');
-
 				foreach ($_FILES as $field_name => $file_data) {
-
-
 					$img_path = './uploads';
 					$file = 'New' . time() . rand(100, 999);
 					$config = array(
 						'upload_path'       => $img_path,
-						'allowed_types' => 'png|jpg|jpeg',
+						'allowed_types' => 'png|jpg|jpeg|pdf|csv',
 						'file_name'         => $file,
 						'overwrite'         => FALSE,
 						'remove_spaces'     => TRUE,
@@ -99,9 +96,10 @@ class Welcome extends Public_Controller
 						}
 					}
 				};
-				$this->welcome_model->img_insert($uploaded_files, $insert_id);
-
-				echo json_encode(array('status' => 1, "message" => 'Query send successfully'));
+			// print_r( $uploaded_files);
+				if ($this->welcome_model->img_insert($uploaded_files, $insert_id)) {
+					echo json_encode(array('status' => 1, "message" => 'Query send successfully'));
+				};
 			} else {
 				echo json_encode(array('status' => 0, "message" => 'Error! please try again later'));
 			}

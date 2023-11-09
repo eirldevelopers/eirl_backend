@@ -59,3 +59,10 @@ $route['what_we_do'] = 'welcome/load_what_we_do';
 $route['work_with_us'] = 'welcome/load_work_with_us';
 $route['tak_to_us'] = 'welcome/load_talk_to_us';
 $route['gallery'] = 'welcome/load_gallery';
+
+
+$route['blogs'] = 'admin/blogs/index';
+$route['add_blog'] = 'admin/blogs/add_blog';
+$route['add_blog'] = 'admin/blogs/add_blog';
+$route['edit_blog'] = 'admin/blogs/edit_blog';
+$route['delete_blog'] = 'admin/blogs/delete_blog';
