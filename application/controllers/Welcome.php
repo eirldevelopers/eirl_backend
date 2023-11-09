@@ -39,6 +39,25 @@ class Welcome extends Public_Controller
 		$this->data['css'] = ['style.css', 'about.css'];
 		$this->template->public_render('web/work_with_us', $this->data);
 	}
+
+	public function terms_and_conditions()
+	{
+		$this->data['css'] = ['style.css', 'about.css'];
+		$this->template->public_render('web/terms&conditions', $this->data);
+	}
+
+	public function privacy_policy()
+	{
+		$this->data['css'] = ['style.css', 'about.css'];
+		$this->template->public_render('web/privacy_policy', $this->data);
+	}
+
+	public function return_policy()
+	{
+		$this->data['css'] = ['style.css', 'about.css'];
+		$this->template->public_render('web/return_policy', $this->data);
+	}
+
 	public function load_talk_to_us()
 	{
 		// $this->data['css'] = ['style.css', 'about.css'];

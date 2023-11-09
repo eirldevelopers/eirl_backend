@@ -59,3 +59,6 @@ $route['what_we_do'] = 'welcome/load_what_we_do';
 $route['work_with_us'] = 'welcome/load_work_with_us';
 $route['tak_to_us'] = 'welcome/load_talk_to_us';
 $route['gallery'] = 'welcome/load_gallery';
+$route['terms_and_conditions'] = 'welcome/terms_and_conditions';
+$route['privacy_policy'] = 'welcome/privacy_policy';
+$route['return_policy'] = 'welcome/return_policy';

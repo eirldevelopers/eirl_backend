@@ -512,6 +512,10 @@ padding: 0 !important;
     }    
 }
 
+.mobile_contact_link {
+    display: none;
+}
+
 @media only screen and (max-width: 551px) and (min-width: 280px){
     #desktop-talk-to-us {
         display: none;
@@ -670,9 +674,25 @@ padding: 0 !important;
         top: unset;
         bottom: 10%;
     }
+
+    .mobile_contact_link {
+        display: unset;
+    }
+
+    .desktop_contact_link{
+        display: none;
+    }
 }
 @media only screen and (max-width: 767px) and (min-width: 550px){
     #desktop-talk-to-us {
+        display: none;
+    }
+
+    .mobile_contact_link {
+        display: unset;
+    }
+
+    .desktop_contact_link{
         display: none;
     }
 
