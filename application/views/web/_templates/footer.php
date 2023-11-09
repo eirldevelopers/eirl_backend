@@ -124,7 +124,7 @@
   <div class="ei-talkto-us offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="ei-talkto-us-head offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasRightLabel">Talk to us</h5>
-      <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close"><img  src="<?php echo base_url('assets/web/images/cross.png') ?>" alt=""></button>
+      <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close"><img src="<?php echo base_url('assets/web/images/cross.png') ?>" alt=""></button>
     </div>
     <div class="ei-talkto-us-body offcanvas-body">
       <form id="talk_to_us_form" enctype="multipart/form-data">
@@ -271,7 +271,6 @@
   $(document).on('submit', '#work_with_us_form', function(e) {
     e.preventDefault();
     var formData = new FormData(this);
-
     $.ajax({
       url: base_url + 'welcome/work_with_us',
       type: 'POST',
@@ -279,7 +278,7 @@
       dataType: 'json',
       success: function(response) {
         if (response.status) {
-          $("#talk_to_us_form")[0].reset()
+          $("#work_with_us_form")[0].reset()
           Swal.fire({
             text: response.message,
             icon: "success"
