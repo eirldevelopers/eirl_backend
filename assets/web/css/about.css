@@ -261,6 +261,9 @@ padding: 0 !important;
 
 .what_we_do_work_img {
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .what_we_do_work_img img {
@@ -898,6 +901,11 @@ padding: 0 !important;
 
     .resume-upload {
         width: 66%;
+    }
+
+    .what_do_do_work_row {
+        margin-bottom: 5rem;
+        overflow: hidden;
     }
 
 }
