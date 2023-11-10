@@ -509,6 +509,13 @@ padding: 0 !important;
     object-fit: contain;
 }
 
+.file_name_class {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
 @keyframes scroll {
     to {
         transform: translate(calc(-50% - 2rem));
