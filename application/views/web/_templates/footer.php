@@ -115,7 +115,7 @@
       <a href="<?php echo base_url('privacy_policy') ?>">Privacy Policy</a>
     </div>
     <div class="copyright">
-      <p>© 2023 Engineering Innovations & Research Lab Centre</p>
+      <p>© 2023 Engineering Innovations Research Lab Pvt Ltd</p>
     </div>
   </div>
 </div>

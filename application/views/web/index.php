@@ -306,7 +306,8 @@
           </div>
           <div class="card-data-2">
             <p>Live far away?<br>Just WhatsApp at</p>
-            <p>45632145283,<br>52436544254</p>
+            <a href="https://wa.me/919516703294">+91 9516703294</a>
+            <!-- <p>45632145283,<br>52436544254</p> -->
           </div>
         </div>
       </div>
@@ -321,7 +322,7 @@
           </div>
           <div class="card-data-2">
             <p>Say hello to our<br>communications team on</p>
-            <p>45632145283<br>52436544254,</p>
+            <a href="tel:919516703294">+91 9516703294</a>
           </div>
         </div>
       </div>

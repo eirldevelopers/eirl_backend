@@ -947,6 +947,10 @@ input[type=number] {
     display: block;
 }
 
+.hamburger_image{
+    height: 30px;
+}
+
 @media only screen and (max-width: 551px) and (min-width: 280px){
     #desktop-talk-to-us {
         display: none;
