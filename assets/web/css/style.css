@@ -370,7 +370,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20rem;
+    height: 25rem;
 }
 
 .ei-why-us-body-info {
@@ -1711,6 +1711,7 @@ input[type=number] {
         width: 33%;
         padding: .5rem;
         justify-content: unset;
+        height: 20rem;
     }
 
     .ei-why-us-head {
