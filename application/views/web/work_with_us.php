@@ -78,10 +78,11 @@
           <div class="ei-work-form-details">
             <label for="profile">Select Job Profile</label>
             <select class="form-select" aria-label="Default select example" id="profile" name="profile" required>
-              <option selected>Select</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option selected value="">Choose</option>
+              <option value="1">Startup Idea</option>
+              <option value="2">Website/App services</option>
+              <option value="3">Cyber security</option>
+              <option value="4">Others</option>
             </select>
           </div>
         </div>
