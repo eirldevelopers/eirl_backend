@@ -7,10 +7,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click Care</title>
+    <title>Engineering Innovation</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <?php
-    // echo link_tag('assets/frameworks/website/css/style.css'); ?>
+    // echo link_tag('assets/frameworks/website/css/style.css'); 
+    ?>
     <?php
     echo link_tag('assets/frameworks/website/css/footer.css');
     echo link_tag('assets/frameworks/website/css/header.css')
@@ -18,7 +19,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <?php
     if (!empty($css)) {
         foreach ($css as $link) {
-             echo link_tag('assets/frameworks/website/css/'.$link);
+            echo link_tag('assets/frameworks/website/css/' . $link);
         }
     }
     ?>

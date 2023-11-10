@@ -62,3 +62,15 @@ $route['gallery'] = 'welcome/load_gallery';
 $route['terms_and_conditions'] = 'welcome/terms_and_conditions';
 $route['privacy_policy'] = 'welcome/privacy_policy';
 $route['return_policy'] = 'welcome/return_policy';
+
+
+// Admin Routes
+$route['dashboard'] = 'admin/dashboard';
+$route['job_applied'] = 'admin/contact_us/job_applied';
+$route['queries'] = 'admin/contact_us/queries';
+$route['blogs'] = 'admin/blogs/index';
+$route['add_blog'] = 'admin/blogs/add_blog';
+$route['add_blog'] = 'admin/blogs/add_blog';
+$route['edit_blog/(:num)'] = 'admin/blogs/edit_blog/$1';
+$route['delete_blog'] = 'admin/blogs/delete_blog';
+

@@ -149,7 +149,8 @@ class Auth extends CI_Controller
 			];
 
 			/* Load Template */
-			$this->template->public_render('auth/login', $this->data);
+			// $this->template->public_render('auth/login', $this->data);
+			$this->load->view('auth/login',$this->data);
 		}
 	}
 	/**

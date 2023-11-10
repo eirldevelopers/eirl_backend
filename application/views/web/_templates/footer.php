@@ -81,29 +81,29 @@
       </div>
       <div class="foot-body">
         <div class="foot-data">
-          <a href="#">About Us</a>
-          <a href="#">Contact Us</a>
-          <a href="#">Login</a>
-          <a href="#">Sign Up</a>
+          <a href="<?php echo base_url('about') ?>">About Us</a>
+          <a href="<?php echo base_url('tak_to_us') ?>">Contact Us</a>
+          <!-- <a href="#">Login</a> -->
+          <!-- <a href="#">Sign Up</a> -->
         </div>
         <div class="foot-data">
-          <a href="#">What we do</a>
-          <a href="#">Work with us</a>
-          <a href="#">Book a call</a>
+          <a href="<?php echo base_url('what_we_do') ?>">What we do</a>
+          <a href="<?php echo base_url('work_with_us') ?>">Work with us</a>
+          <!-- <a href="#">Book a call</a> -->
         </div>
         <div class="foot-data">
-          <a href="#">Return, Refund & Cancelation</a>
-          <a href="#">Shipping & delivery policy</a>
-          <a href="#">Pricing Policy</a>
+          <a href="<?php echo base_url('return_policy') ?>">Return, Refund & Cancelation</a>
+          <!-- <a href="#">Shipping & delivery policy</a> -->
+          <!-- <a href="#">Pricing Policy</a> -->
         </div>
         <div class="foot-contact">
           <div class="foot-address">
             <img src="<?php echo base_url('assets/web/images/footer/map.png') ?>" alt="">
-            <p>123, First street, third building, area name, state name, code, country</p>
+            <p>2004/C,Vijay Nagar,Jabalpur,482002</p>
           </div>
           <div class="foot-address">
             <img class="phone-foot-img" src="<?php echo base_url('assets/web/images/footer/phone.png') ?>" alt="">
-            <p>1234567891, 1234567891</p>
+            <p>+91 9516703294</p>
           </div>
         </div>
       </div>
@@ -111,8 +111,8 @@
   </footer>
   <div class="end-statement container">
     <div class="terms">
-      <a href="#">Terms and Conditions</a>
-      <a href="#">Privacy Policy</a>
+      <a href="<?php echo base_url('terms_and_conditions') ?>">Terms and Conditions</a>
+      <a href="<?php echo base_url('privacy_policy') ?>">Privacy Policy</a>
     </div>
     <div class="copyright">
       <p>© 2023 Engineering Innovations & Research Lab Centre</p>
