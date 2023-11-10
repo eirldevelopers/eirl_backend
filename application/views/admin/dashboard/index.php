@@ -11,7 +11,7 @@
                         <div class="page-title-box">
                             <div class="page-title-right">
                             </div>
-                            <?php echo $pagetitle; ?>
+                           <h2>Dashboard</h2>
                         </div>
                     </div>
                 </div>
@@ -27,8 +27,8 @@
                         <div class="small-box bg-primary">
                             <div class="inner">
                                 <?php
-                                if ($total_projects) {
-                                    echo  '<h3 class="text-center">' . count($total_projects) . '</h3>';
+                                if ($total_work_with_us) {
+                                    echo  '<h3 class="text-center">' . count($total_work_with_us) . '</h3>';
                                 } else {
                                     echo  '<h3 class="">0</h3>';
                                 }
@@ -38,15 +38,15 @@
                             <div class="icon">
                                 <img class="ion" src="http://localhost/uk-eats-admin/assets/frameworks/admin/images/current_order.svg" alt="">
                             </div>
-                            <span href="#" class="small-box-footer">Total Projects</span>
+                            <span href="#" class="small-box-footer">Total Job Applied</span>
                         </div>
                     </div>
                     <div class="col-lg-3 col-6">
                         <div class="small-box bg-primary">
                             <div class="inner">
                                 <?php
-                                if ($total_query) {
-                                    echo  '<h3 class="text-center">' . count($total_query) . '</h3>';
+                                if ($total_talk_to_us) {
+                                    echo  '<h3 class="text-center">' . count($total_talk_to_us) . '</h3>';
                                 } else {
                                     echo  '<h3 class="">0</h3>';
                                 }
@@ -56,7 +56,7 @@
                             <div class="icon">
                                 <img class="ion" src="http://localhost/uk-eats-admin/assets/frameworks/admin/images/current_order.svg" alt="">
                             </div>
-                            <span href="#" class="small-box-footer">Total Query</span>
+                            <span href="#" class="small-box-footer">Total Queries</span>
                         </div>
                     </div>
                 </div>

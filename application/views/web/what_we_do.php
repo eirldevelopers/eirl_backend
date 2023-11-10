@@ -38,33 +38,51 @@
       <button id="desktop-talk-to-us" class="btn ei-contact-foot-btn" data-bs-toggle="offcanvas" href="#offcanvasRight" role="button" aria-controls="offcanvasRight">Talk to us</button>
       <a href="<?php echo base_url('tak_to_us') ?>" id="mobile-talk-to-us" class="btn ei-contact-foot-btn">Talk to us</a>
     </div>
-    <div class="what_we_do_work container">
+    <div class="what_we_do_work container" id="our_blogs">
       <h1 data-aos="fade-up">Explore some of our work</h1>
-      <div class="what_do_do_work_row row">
-        <div class="col-lg-7 col-md-7 col-sm-12" data-aos="slide-right">
-          <div class="what_we_do_work_img">
-            <img src="<?php echo base_url('assets/web/images/what_we_do_work.png') ?>" alt="">
-          </div>
-        </div>
-        <div class="col-lg-5 col-md-5 col-sm-12" data-aos="slide-left">
-          <div class="what_we_do_work_data">
-            <h1>Title 1</h1>
-            <p class="what_do_do_work_para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet lorem mauris, vitae blandit tortor mollis sit amet. Integer imperdiet a enim nec posuere. Ut pulvinar urna eu diam pharetra porttitor. Fusce efficitur neque tortor, a rutrum massa lacinia id. Donec purus justo, semper at vestibulum non, aliquet at mauris. Mauris volutpat, lectus in dictum luctus, orci urna porttitor mi, at eleifend nisl nibh nec urna. Quisque dui mi, imperdiet eu mi in, iaculis ultricies neque. Nam interdum bibendum elit, nec sollicitudin lectus lacinia a. Pellentesque vitae nulla a quam auctor maximus. Maecenas maximus, quam non lobortis feugiat, diam risus blandit ex, id cursus erat odio quis massa. Pellentesque hendrerit turpis quis dui dapibus, sit amet molestie dui accumsan. Aenean quis risus feugiat, porta risus nec, malesuada orc</p>
-          </div>
-        </div>
-      </div>
-      <div class="what_do_do_work_row mob-2-data row">
-        <div class="col-lg-5 col-md-5 col-sm-12" data-aos="slide-right">
-          <div class="what_we_do_work_data">
-            <h1>Title 1</h1>
-            <p class="what_do_do_work_para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet lorem mauris, vitae blandit tortor mollis sit amet. Integer imperdiet a enim nec posuere. Ut pulvinar urna eu diam pharetra porttitor. Fusce efficitur neque tortor, a rutrum massa lacinia id. Donec purus justo, semper at vestibulum non, aliquet at mauris. Mauris volutpat, lectus in dictum luctus, orci urna porttitor mi, at eleifend nisl nibh nec urna. Quisque dui mi, imperdiet eu mi in, iaculis ultricies neque. Nam interdum bibendum elit, nec sollicitudin lectus lacinia a. Pellentesque vitae nulla a quam auctor maximus. Maecenas maximus, quam non lobortis feugiat, diam risus blandit ex, id cursus erat odio quis massa. Pellentesque hendrerit turpis quis dui dapibus, sit amet molestie dui accumsan. Aenean quis risus feugiat, porta risus nec, malesuada orc</p>
-          </div>
-        </div>
-        <div class="col-lg-7 col-md-7 col-sm-12" data-aos="slide-left">
-          <div class="what_we_do_work_img">
-            <img src="<?php echo base_url('assets/web/images/what_we_do_work.png') ?>" alt="">
-          </div>
-        </div>
-      </div>
+
+      <?php
+      // print_r($blogs);
+      if ($blogs) {
+        $i = 1;
+        foreach ($blogs as $blog) {
+          if ($i % 2 != 0) {
+      ?>
+            <div class="what_do_do_work_row row">
+              <div class="col-lg-7 col-md-7 col-sm-12" data-aos="slide-right">
+                <div class="what_we_do_work_img">
+                  <img src="<?php echo base_url('uploads/'.$blog->blog_image) ?>" alt="">
+                </div>
+              </div>
+              <div class="col-lg-5 col-md-5 col-sm-12" data-aos="slide-left">
+                <div class="what_we_do_work_data">
+                  <h1><?php echo $blog->blog_name ?></h1>
+                  <p class="what_do_do_work_para"><?php echo $blog->blog_description ?></p>
+                </div>
+              </div>
+            </div>
+          <?php
+
+          } else {
+          ?>
+            <div class="what_do_do_work_row mob-2-data row">
+              <div class="col-lg-5 col-md-5 col-sm-12" data-aos="slide-right">
+                <div class="what_we_do_work_data">
+                  <h1><?php echo $blog->blog_name ?></h1>
+                  <p class="what_do_do_work_para"><?php echo $blog->blog_description ?></p>
+                </div>
+              </div>
+              <div class="col-lg-7 col-md-7 col-sm-12" data-aos="slide-left">
+                <div class="what_we_do_work_img">
+                  <img src="<?php echo base_url('uploads/'.$blog->blog_image) ?>" alt="">
+                </div>
+              </div>
+            </div>
+      <?php
+          }
+          $i++;
+        }
+      }
+      ?>
     </div>
   </div>

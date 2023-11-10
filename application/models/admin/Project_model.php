@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Welcome_model extends CI_Model
+class Project_model extends CI_Model
 {
 
 
@@ -12,23 +12,17 @@ class Welcome_model extends CI_Model
   }
 
 
-  public function save_work_with_us($data)
+  public function add_project($data)
   {
-    $this->db->insert('work_with_us', $data);
+    $this->db->insert('project_details', $data);
     $insert_id = $this->db->insert_id();
+
     return  $insert_id;
   }
 
-  public function save_talk_to_us($data)
+  public function project_img_insert($data, $id)
   {
-    return ($this->db->insert('talk_to_us', $data));
-    // $insert_id = $this->db->insert_id();
-    // return  $insert_id;
-  }
-
-  public function img_insert($data, $id)
-  {
-    return $this->db->update('work_with_us', $data, "id =$id");
+    $this->db->update('project_details', $data, "id =$id");
   }
 
   public function get_project_list()
@@ -68,17 +62,5 @@ class Welcome_model extends CI_Model
   public function delete_project($id)
   {
     return $this->db->delete('project_details', array('id' => $id));
-  }
-
-  public function get_blogs()
-  {
-    $this->db->select('*');
-    $this->db->from('blogs');
-    $query = $this->db->get();
-    if ($query->num_rows() > 0) {
-      return $query->result();
-    } else {
-      return FALSE;
-    }
   }
 }

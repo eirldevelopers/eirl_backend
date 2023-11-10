@@ -256,6 +256,10 @@ body {
     position: relative;
 }
 
+.four {
+    position: relative;
+}
+
 .video-container {
     display: flex;
     justify-content: center;
@@ -333,8 +337,8 @@ body {
 .ei-illustration-4 {
     position: absolute;
     z-index: -1;
-    top: 31%;
-    left: 21%;
+    left: 25%;
+    top: 60%;
     width: 50%;
 }
 
@@ -366,6 +370,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 20rem;
 }
 
 .ei-why-us-body-info {
@@ -514,6 +519,8 @@ body {
 
 .ei-our-work-body-img img {
     height: 80%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .ei-our-work-body-view-all {
@@ -1688,7 +1695,7 @@ input[type=number] {
     }
 
     .ei-illustration-4 {
-        top: 24%;
+        top: 60%;
         left: 22%;
     }
 
@@ -1936,7 +1943,7 @@ input[type=number] {
 
     .ei-illustration-4 {
         top: 26%;
-        left: 15%;
+        left: 9%;
     }
 
     .video-container video {
@@ -2038,12 +2045,12 @@ input[type=number] {
     }
 
     .ei-illustration-4 {
-        top: 28%;
-        left: 20%;
+        top: 35%;
+        left: 15%;
     }
 
     .ei-illustration-4 img {
-        height: 40rem;
+        height: 35rem;
     }
 
     .ei-why-us-wrappar {

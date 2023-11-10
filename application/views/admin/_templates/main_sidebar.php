@@ -13,22 +13,28 @@
                 <li class="menu-title">Navigation</li>
 
                 <li>
-                    <a href="<?php echo base_url('admin/dashboard'); ?>" class="<?php echo $this->router->fetch_class() == 'dashboard' ? 'active' : ''; ?>">
+                    <a href="<?php echo base_url('dashboard'); ?>" class="<?php echo $this->router->fetch_class() == 'dashboard' ? 'active' : ''; ?>">
                         <i class="fe-airplay"></i>
                         <span> Dashboard </span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo base_url('projects'); ?>" class="<?php echo $this->router->fetch_class() == 'project' ? 'active' : ''; ?>">
+                    <a href="<?php echo base_url('job_applied'); ?>" class="<?php echo $this->router->fetch_method() == 'job_applied' ? 'active' : ''; ?>">
                         <i class="fe-home"></i>
-                        <span> Manage Project</span>
+                        <span>Job Applied</span>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url('query'); ?>" class="<?php echo $this->router->fetch_class() == 'contact_us' ? 'active' : ''; ?>">
+                    <a href="<?php echo base_url('queries'); ?>" class="<?php echo $this->router->fetch_method() == 'queries' ? 'active' : ''; ?>">
                         <i class="fe-home"></i>
-                        <span> Contact US</span>
+                        <span>Queries</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo base_url('blogs'); ?>" class="<?php echo $this->router->fetch_class() == 'blogs' ? 'active' : ''; ?>">
+                        <i class="fe-home"></i>
+                        <span>Blogs</span>
                     </a>
                 </li>
             </ul>

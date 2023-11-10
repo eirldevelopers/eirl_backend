@@ -162,6 +162,15 @@ padding: 0 !important;
     margin-bottom: 2rem
 }
 
+.social-links {
+    display: flex;
+    gap: 0.5rem;
+    text-decoration: none;
+    align-items: center;
+    color: #000;
+}
+
+
 .social-icons img {
     height: 3rem;
 }
@@ -252,6 +261,9 @@ padding: 0 !important;
 
 .what_we_do_work_img {
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .what_we_do_work_img img {
@@ -503,6 +515,10 @@ padding: 0 !important;
     }    
 }
 
+.mobile_contact_link {
+    display: none;
+}
+
 @media only screen and (max-width: 551px) and (min-width: 280px){
     #desktop-talk-to-us {
         display: none;
@@ -661,9 +677,25 @@ padding: 0 !important;
         top: unset;
         bottom: 10%;
     }
+
+    .mobile_contact_link {
+        display: unset;
+    }
+
+    .desktop_contact_link{
+        display: none;
+    }
 }
 @media only screen and (max-width: 767px) and (min-width: 550px){
     #desktop-talk-to-us {
+        display: none;
+    }
+
+    .mobile_contact_link {
+        display: unset;
+    }
+
+    .desktop_contact_link{
         display: none;
     }
 
@@ -869,6 +901,11 @@ padding: 0 !important;
 
     .resume-upload {
         width: 66%;
+    }
+
+    .what_do_do_work_row {
+        margin-bottom: 5rem;
+        overflow: hidden;
     }
 
 }

@@ -32,20 +32,28 @@
           <h3>Our Socials</h3>
           <div class="social-icons-row row">
             <div class="social-icons col-lg-5">
-              <img src="<?php echo base_url('assets/web/images/work-with-us/social/instagram.svg') ?>" alt="">
-              <span>Add Link Here</span>
+              <a class="social-links" href="https://www.instagram.com/engineeringinnovation.official/">
+                <img src="<?php echo base_url('assets/web/images/work-with-us/social/instagram.svg') ?>" alt="">
+                <span>@ei_official</span>
+              </a>
             </div>
             <div class="social-icons col-lg-5">
-              <img src="<?php echo base_url('assets/web/images/work-with-us/social/facebook.svg') ?>" alt="">
-              <span>Add Link Here</span>
+              <a class="social-links" href="https://www.facebook.com/eirlpl">
+                <img src="<?php echo base_url('assets/web/images/work-with-us/social/facebook.svg') ?>" alt="">
+                <span>@eirl</span>
+              </a>
             </div>
             <div class="social-icons col-lg-5">
-              <img src="<?php echo base_url('assets/web/images/work-with-us/social/linkedin.svg') ?>" alt="">
-              <span>Add Link Here</span>
+              <a class="social-links" href="https://www.linkedin.com/company/eirl/">
+                <img src="<?php echo base_url('assets/web/images/work-with-us/social/linkedin.svg') ?>" alt="">
+                <span>EIRL</span>
+              </a>
             </div>
             <div class="social-icons col-lg-5">
-              <img src="<?php echo base_url('assets/web/images/work-with-us/social/whatsapp.svg') ?>" alt="">
-              <span>Add Link Here</span>
+              <a class="social-links" href="https://wa.me/9516703294">
+                <img src="<?php echo base_url('assets/web/images/work-with-us/social/whatsapp.svg') ?>" alt="">
+                <span>Chat with us</span>
+              </a>
             </div>
           </div>
         </div>
@@ -78,11 +86,10 @@
           <div class="ei-work-form-details">
             <label for="profile">Select Job Profile</label>
             <select class="form-select" aria-label="Default select example" id="profile" name="profile" required>
-              <option selected value="">Choose</option>
-              <option value="1">Startup Idea</option>
-              <option value="2">Website/App services</option>
-              <option value="3">Cyber security</option>
-              <option value="4">Others</option>
+              <option selected value="">Select</option>
+              <option value="1">Developer</option>
+              <option value="2">Designer</option>
+              <option value="3">Cybersecurity</option>
             </select>
           </div>
         </div>
@@ -94,10 +101,10 @@
         </div>
         <div class="ei-work-form-data col-lg-6 col-md-6">
           <div class="ei-work-form-details">
-            <label class="resume-class" for="cv">Upload Resume/CV
-              <div class="resume-upload"><span>Choose File</span></div>
+            <label class="resume-class" for="job_cv">Upload Resume/CV
+              <div class="resume-upload"><span class="file_name_class">Choose File</span></div>
             </label>
-            <input style="display: none;" type="file" name="cv" id="cv" placeholder="Choose File" required>
+            <input style="display: none;" accept="image/*, .pdf" type="file" name="job_cv" id="job_cv" placeholder="Choose File" required>
           </div>
         </div>
         <div class="ei-work-form-submit">
