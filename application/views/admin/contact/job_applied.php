@@ -66,7 +66,13 @@
                                                 ?>
                                             </td>
                                             <td><?php echo $job->experience ? $job->experience : 'N/A' ?></td>
-                                            <td><a href="<?php echo base_url('uploads/' . $job->cv) ?>" target="/blank"><?php echo $job->cv ? $job->cv : 'N/A' ?></a></td>
+                                            <td><a href="<?php
+                                                            if ($job->cv != "") {
+                                                                echo base_url('uploads/' . $job->cv);
+                                                            } else {
+                                                                echo "#";
+                                                            }
+                                                            ?>" target="/blank"><?php echo $job->cv ? $job->cv : 'N/A' ?></a></td>
                                             <td><?php echo $job->created_on ?></td>
                                         </tr>
                                 <?php

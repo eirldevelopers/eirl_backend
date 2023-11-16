@@ -1,3 +1,15 @@
+<div class="mobile-logo fixed-top ">
+  <a href="<?php echo base_url('home') ?>"><img src="<?php echo base_url('assets/web/images/logo.png') ?>" alt=""></a>
+  <div class="dropdown">
+    <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="<?php echo base_url('assets/web/images/hamburger.png') ?>" class="hamburger_image" style="height:30px" />
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="<?php echo base_url('privacy_policy') ?>">Privacy Policy</a></li>
+      <li><a class="dropdown-item" href="<?php echo base_url('terms_and_conditions') ?>">Terms And Conditions</a></li>
+      <li><a class="dropdown-item" href="<?php echo base_url('return_policy') ?>">Return Policy</a></li>
+    </ul>
+  </div>
+</div>
 <section class="ei-section-1 container">
   <video autoplay muted loop id="myVideo">
     <!-- <source src="./assets/videos-compressed/Hero Page Video-1.m4v" type="video/mp4"> -->
@@ -239,7 +251,7 @@
         ?>
             <div class="col-lg-4 col-md-4 col-sm-6 ei-why-us-wrappar">
               <div class="ei-our-work-body-img">
-                <img src="<?php echo base_url('uploads/'.$blog->blog_image) ?>" alt="" />
+                <img src="<?php echo base_url('uploads/' . $blog->blog_image) ?>" alt="" />
               </div>
             </div>
         <?php
