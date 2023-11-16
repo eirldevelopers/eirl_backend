@@ -28,7 +28,7 @@
         <h1>We Can</h1>
       </div>
       <div class="ei-section-2-div-2 container">
-        <img src="<?php echo base_url('assets/web/images/2.png') ?>" alt="">
+        <img src="<?php echo base_url('assets/web/images/2.webp') ?>" alt="">
       </div>
     </div>
     <div class="container">
@@ -42,7 +42,7 @@
           <h3>Develop your website</h3>
         </div>
         <div class="ei-illustration-1 container">
-          <img src="<?php echo base_url('assets/web/images/3.png') ?>" alt="">
+          <img src="<?php echo base_url('assets/web/images/3.webp') ?>" alt="">
         </div>
       </div>
       <div class="two ei-video-row row">
@@ -55,7 +55,7 @@
           </div>
         </div>
         <div class="ei-illustration-2 container">
-          <img src="<?php echo base_url('assets/web/images/4.png') ?>" alt="">
+          <img src="<?php echo base_url('assets/web/images/4.webp') ?>" alt="">
 
         </div>
       </div>
@@ -69,7 +69,7 @@
           <h3>Develop your app</h3>
         </div>
         <div class="ei-illustration-3 container">
-          <img src="<?php echo base_url('assets/web/images/5.png') ?>" alt="">
+          <img src="<?php echo base_url('assets/web/images/5.webp') ?>" alt="">
         </div>
       </div>
       <div class="four ei-video-row row">
@@ -82,7 +82,7 @@
           </div>
         </div>
         <div class="ei-illustration-4 container">
-          <img src="<?php echo base_url('assets/web/images/6.png') ?>" alt="">
+          <img src="<?php echo base_url('assets/web/images/6.webp') ?>" alt="">
 
         </div>
       </div>
@@ -135,7 +135,7 @@
   </div>
   <div class="ei-why-us container">
     <div class="ei-why-us-head">
-      <!-- <img src="./assets/images/d.png" alt=""> -->
+      <!-- <img src="./assets/images/d.webp" alt=""> -->
       <h2>Why Us?</h2>
     </div>
     <div class="ei-why-us-body container">
@@ -147,7 +147,7 @@
         </div>
         <div class="col-lg-4 col-md-4 ei-why-us-wrappar custom-width">
           <div class="ei-why-us-body-img">
-            <img src="<?php echo base_url('assets/web/images/why_us/1.png') ?>" alt="" />
+            <img src="<?php echo base_url('assets/web/images/why_us/1.webp') ?>" alt="" />
           </div>
         </div>
         <div class="col-lg-4 col-md-4 ei-why-us-wrappar custom-width why-us-data-div-2">
@@ -157,7 +157,7 @@
         </div>
         <div class="col-lg-4 col-md-4 ei-why-us-wrappar custom-width">
           <div class="ei-why-us-body-img">
-            <img src="<?php echo base_url('assets/web/images/why_us/2.png') ?>" alt="" />
+            <img src="<?php echo base_url('assets/web/images/why_us/2.webp') ?>" alt="" />
           </div>
         </div>
         <div class="col-lg-4 col-md-4 ei-why-us-wrappar custom-width why-us-data-div-3">
@@ -167,7 +167,7 @@
         </div>
         <div class="col-lg-4 col-md-4 ei-why-us-wrappar custom-width">
           <div class="ei-why-us-body-img">
-            <img src="<?php echo base_url('assets/web/images/why_us/3.png') ?>" alt="" />
+            <img src="<?php echo base_url('assets/web/images/why_us/3.webp') ?>" alt="" />
           </div>
         </div>
       </div>
@@ -179,12 +179,12 @@
           <p>You get to work with the finest team of skilled and devoted designers & developers at your service.</p>
         </div>
         <div class="mobile-ei-why-us-img">
-          <img src="<?php echo base_url('assets/web/images/why_us/1.png') ?>" alt="" />
+          <img src="<?php echo base_url('assets/web/images/why_us/1.webp') ?>" alt="" />
         </div>
       </div>
       <div class="mobile-ei-why-us-data">
         <div class="mobile-ei-why-us-img">
-          <img src="<?php echo base_url('assets/web/images/why_us/2.png') ?>" alt="" />
+          <img src="<?php echo base_url('assets/web/images/why_us/2.webp') ?>" alt="" />
         </div>
         <div class="mobile-ei-why-us-details why-us-data-div-2">
           <p>We collaborate with you seamlessly to avoid chaos with effective teamwork.</p>
@@ -195,7 +195,7 @@
           <p>You get to enjoy budget-friendly flat rates that effectively manage your expenses.</p>
         </div>
         <div class="mobile-ei-why-us-img">
-          <img src="<?php echo base_url('assets/web/images/why_us/3.png') ?>" alt="" />
+          <img src="<?php echo base_url('assets/web/images/why_us/3.webp') ?>" alt="" />
         </div>
       </div>
     </div>
@@ -239,7 +239,7 @@
     <div class="ei-our-work-head">
       <h1>Our Work</h1>
       <!-- <img src="./" alt=""> -->
-      <img src="<?php echo base_url('assets/web/images/2.png') ?>" alt="">
+      <img src="<?php echo base_url('assets/web/images/2.webp') ?>" alt="">
     </div>
     <div class="ei-our-work-body">
       <div class="row ei-why-us">
@@ -269,17 +269,17 @@
     <div class="ei-buzz-row row">
       <div class="col-lg-4 col-md-4">
         <div class="ei-buzz-img">
-          <img src="<?php echo base_url('assets/web/images/gallery_img/1.png') ?>" alt="" />
+          <img src="<?php echo base_url('assets/web/images/gallery_img/1.webp') ?>" alt="" />
         </div>
       </div>
       <div class="col-lg-4 col-md-4">
         <div class="ei-buzz-img">
-          <img src="<?php echo base_url('assets/web/images/gallery_img/2.png') ?>" alt="" />
+          <img src="<?php echo base_url('assets/web/images/gallery_img/2.webp') ?>" alt="" />
         </div>
       </div>
       <div class="col-lg-4 col-md-4">
         <div class="ei-buzz-img">
-          <img src="<?php echo base_url('assets/web/images/gallery_img/3.png') ?>" alt="" />
+          <img src="<?php echo base_url('assets/web/images/gallery_img/3.webp') ?>" alt="" />
         </div>
       </div>
     </div>

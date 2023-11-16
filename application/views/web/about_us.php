@@ -25,7 +25,7 @@
       </div>
       <div class="ei-about-col col-lg-4 col-md-12 col-sm-12" data-aos="slide-left">
         <div class="ei-about-image">
-          <img src="<?php echo base_url('assets/web/images/about_us/about_img-1.png') ?>" alt="">
+          <img src="<?php echo base_url('assets/web/images/about_us/about_img-1.webp') ?>" alt="">
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@
     <div class="ei-about-row rev-row row">
       <div class="ei-about-col col-lg-4 col-md-12 col-sm-12" data-aos="slide-right">
         <div class="ei-about-image">
-          <img src="<?php echo base_url('assets/web/images/about_us/about_img-2.png') ?>" alt="">
+          <img src="<?php echo base_url('assets/web/images/about_us/about_img-2.webp') ?>" alt="">
         </div>
       </div>
       <div class="ei-about-col col-lg-8 col-md-12 col-sm-12" data-aos="slide-left">
@@ -52,15 +52,15 @@
     </div>
     <div class="scroller">
       <ul class="tag-list scroller-inner">
-        <li><img src="<?php echo base_url('assets/web/images/about_us/carousal/1.png') ?>" alt=""></li>
-        <li><img src="<?php echo base_url('assets/web/images/about_us/carousal/2.png') ?>" alt=""></li>
-        <li><img src="<?php echo base_url('assets/web/images/about_us/carousal/3.png') ?>" alt=""></li>
-        <li><img src="<?php echo base_url('assets/web/images/about_us/carousal/4.png') ?>" alt=""></li>
-        <li><img src="<?php echo base_url('assets/web/images/about_us/carousal/5.png') ?>" alt=""></li>
-        <li><img src="<?php echo base_url('assets/web/images/about_us/carousal/6.png') ?>" alt=""></li>
-        <li><img src="<?php echo base_url('assets/web/images/about_us/carousal/7.png') ?>" alt=""></li>
-        <li><img src="<?php echo base_url('assets/web/images/about_us/carousal/8.png') ?>" alt=""></li>
-        <li><img src="<?php echo base_url('assets/web/images/about_us/carousal/9.png') ?>" alt=""></li>
+        <li><img src="<?php echo base_url('assets/web/images/about_us/carousal/1.webp') ?>" alt=""></li>
+        <li><img src="<?php echo base_url('assets/web/images/about_us/carousal/2.webp') ?>" alt=""></li>
+        <li><img src="<?php echo base_url('assets/web/images/about_us/carousal/3.webp') ?>" alt=""></li>
+        <li><img src="<?php echo base_url('assets/web/images/about_us/carousal/4.webp') ?>" alt=""></li>
+        <li><img src="<?php echo base_url('assets/web/images/about_us/carousal/5.webp') ?>" alt=""></li>
+        <li><img src="<?php echo base_url('assets/web/images/about_us/carousal/6.webp') ?>" alt=""></li>
+        <li><img src="<?php echo base_url('assets/web/images/about_us/carousal/7.webp') ?>" alt=""></li>
+        <li><img src="<?php echo base_url('assets/web/images/about_us/carousal/8.webp') ?>" alt=""></li>
+        <li><img src="<?php echo base_url('assets/web/images/about_us/carousal/9.webp') ?>" alt=""></li>
       </ul>
     </div>
   </div>
