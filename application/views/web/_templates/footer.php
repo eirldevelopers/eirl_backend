@@ -82,7 +82,7 @@
       <div class="foot-body">
         <div class="foot-data">
           <a href="<?php echo base_url('about') ?>">About Us</a>
-          <a href="<?php echo base_url('tak_to_us') ?>">Contact Us</a>
+          <a data-bs-toggle="offcanvas" href="#offcanvasRight" role="button" aria-controls="offcanvasRight">Contact Us</a>
           <!-- <a href="#">Login</a> -->
           <!-- <a href="#">Sign Up</a> -->
         </div>
