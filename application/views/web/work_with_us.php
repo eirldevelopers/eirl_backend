@@ -1,5 +1,14 @@
-<div class="mobile-logo fixed-top">
+<div class="mobile-logo fixed-top ">
   <a href="<?php echo base_url('home') ?>"><img src="<?php echo base_url('assets/web/images/logo.png') ?>" alt=""></a>
+  <div class="dropdown">
+    <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="<?php echo base_url('assets/web/images/hamburger.png') ?>" class="hamburger_image" style="height:30px"/>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="<?php echo base_url('privacy_policy') ?>">Privacy Policy</a></li>
+      <li><a class="dropdown-item" href="<?php echo base_url('terms_and_conditions') ?>">Terms And Conditions</a></li>
+      <li><a class="dropdown-item" href="<?php echo base_url('return_policy') ?>">Return Policy</a></li>
+    </ul>
+  </div>
 </div>
 <section class="ei-about-section">
   <div class="ei-about-div container">
@@ -32,25 +41,25 @@
           <h3>Our Socials</h3>
           <div class="social-icons-row row">
             <div class="social-icons col-lg-5">
-              <a class="social-links" href="https://www.instagram.com/engineeringinnovation.official/">
+              <a class="social-links" href="https://www.instagram.com/engineeringinnovation.official/" target="/blank">
                 <img src="<?php echo base_url('assets/web/images/work-with-us/social/instagram.svg') ?>" alt="">
                 <span>@ei_official</span>
               </a>
             </div>
             <div class="social-icons col-lg-5">
-              <a class="social-links" href="https://www.facebook.com/eirlpl">
+              <a class="social-links" href="https://www.facebook.com/eirlpl" target="/blank">
                 <img src="<?php echo base_url('assets/web/images/work-with-us/social/facebook.svg') ?>" alt="">
                 <span>@eirl</span>
               </a>
             </div>
             <div class="social-icons col-lg-5">
-              <a class="social-links" href="https://www.linkedin.com/company/eirl/">
+              <a class="social-links" href="https://www.linkedin.com/company/eirl/" target="/blank">
                 <img src="<?php echo base_url('assets/web/images/work-with-us/social/linkedin.svg') ?>" alt="">
                 <span>EIRL</span>
               </a>
             </div>
             <div class="social-icons col-lg-5">
-              <a class="social-links" href="https://wa.me/9516703294">
+              <a class="social-links" href="https://wa.me/9516703294" target="/blank">
                 <img src="<?php echo base_url('assets/web/images/work-with-us/social/whatsapp.svg') ?>" alt="">
                 <span>Chat with us</span>
               </a>
@@ -104,7 +113,7 @@
             <label class="resume-class" for="job_cv">Upload Resume/CV
               <div class="resume-upload"><span class="file_name_class">Choose File</span></div>
             </label>
-            <input style="display: none;" accept="image/*, .pdf" type="file" name="job_cv" id="job_cv" placeholder="Choose File" required>
+            <input style="display: none;" accept="application/pdf" type="file" name="cv" id="job_cv" placeholder="Choose File" required>
           </div>
         </div>
         <div class="ei-work-form-submit">

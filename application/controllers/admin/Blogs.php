@@ -162,6 +162,7 @@ class Blogs extends Admin_Controller
                         'overwrite'         => FALSE,
                         'remove_spaces'     => TRUE,
                         'quality'           => '100%',
+                        'max_size'           => '50',
                     );
                     $this->upload->initialize($config);
                     // print_r($file_data);
@@ -170,7 +171,7 @@ class Blogs extends Admin_Controller
                         if ($this->upload->do_upload($field_name)) {
                             $uploaded_files[$field_name] = $this->upload->data()['file_name'];
                         } else {
-                            $error[$field_name] = $this->upload->display_errors();
+                            $this->session->set_flashdata('message', ['0', 'Only imgages allowed and sshould not be greater than 50 kb.']);
                         }
                     }
                 };
@@ -241,6 +242,7 @@ class Blogs extends Admin_Controller
                             'overwrite'         => FALSE,
                             'remove_spaces'     => TRUE,
                             'quality'           => '100%',
+                            'max_size'           => '50',
                         );
                         $this->upload->initialize($config);
                         // print_r($file_data);
@@ -249,7 +251,8 @@ class Blogs extends Admin_Controller
                             if ($this->upload->do_upload($field_name)) {
                                 $uploaded_files[$field_name] = $this->upload->data()['file_name'];
                             } else {
-                                $error[$field_name] = $this->upload->display_errors();
+                                $this->session->set_flashdata('message', ['0', 'Only imgages allowed and sshould not be greater than 50 kb.']);
+                                exit();
                             }
                         }
                     };
@@ -363,15 +366,15 @@ class Blogs extends Admin_Controller
     //     }
     //   }
 
-      public function delete_blog()
-      {
+    public function delete_blog()
+    {
         $delete_id = $this->input->post('delete_id');
         if ($delete_id) {
-          if ($this->blog_model->delete_blog($delete_id)) {
-            echo json_encode(array("status" => 1, "message" => "Blog delete successfully"));
-          } else {
-            echo json_encode(array("status" => 0, "message" => "Error ! Please try again  later"));
-          }
+            if ($this->blog_model->delete_blog($delete_id)) {
+                echo json_encode(array("status" => 1, "message" => "Blog delete successfully"));
+            } else {
+                echo json_encode(array("status" => 0, "message" => "Error ! Please try again  later"));
+            }
         }
-      }
+    }
 }

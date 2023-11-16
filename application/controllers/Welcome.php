@@ -93,31 +93,38 @@ class Welcome extends Public_Controller
 			$insert_id = $this->welcome_model->save_work_with_us($data);
 			// echo $insert_id;
 			if ($insert_id) {
+
 				/*-----------------profile_pic----------------------*/
 				$this->load->library('upload');
 				foreach ($_FILES as $field_name => $file_data) {
+
 					$img_path = './uploads';
-					$file = 'New' . time() . rand(100, 999);
+					$file = 'resume' . time() . rand(100, 999);
 					$config = array(
 						'upload_path'       => $img_path,
-						'allowed_types' => 'png|jpg|jpeg|pdf|csv',
+						'allowed_types' => 'pdf',
 						'file_name'         => $file,
 						'overwrite'         => FALSE,
 						'remove_spaces'     => TRUE,
 						'quality'           => '100%',
+						'max_size'           => '1000',
+
 					);
 					$this->upload->initialize($config);
 					// print_r($file_data);
 					if (!empty($file_data['name'])) {
 						$_FILES[$field_name] = $file_data;
 						if ($this->upload->do_upload($field_name)) {
+							// echo "hii";
 							$uploaded_files[$field_name] = $this->upload->data()['file_name'];
 						} else {
-							$error[$field_name] = $this->upload->display_errors();
+							// print_r($this->upload->display_errors());
+							echo json_encode(array('status' => 0, "message" => 'Only pdf allowed and should not be greater than 1mb'));
+							exit();
 						}
 					}
 				};
-			// print_r( $uploaded_files);
+				// print_r( $uploaded_files);
 				if ($this->welcome_model->img_insert($uploaded_files, $insert_id)) {
 					echo json_encode(array('status' => 1, "message" => 'Query send successfully'));
 				};
