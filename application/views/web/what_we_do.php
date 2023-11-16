@@ -19,7 +19,7 @@
     <div class="what_we_do_body_row row">
       <div class="col-lg-6 col-md-12" data-aos="slide-right">
         <div class="what_we_do_body_img">
-          <img src="<?php echo base_url('assets/web/images/what_we_do.png') ?>" alt="">
+          <img src="<?php echo base_url('assets/web/images/what_we_do.webp') ?>" alt="">
         </div>
       </div>
       <div class="col-lg-6 col-md-12" data-aos="slide-left">

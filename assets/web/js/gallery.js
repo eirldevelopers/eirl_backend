@@ -26,7 +26,7 @@ gallery_images.forEach(img => {
         prev_btn.addEventListener("click", function (event) {
             let new_num = dataValue - 1;
             if (new_num >= 1) {
-                currentImage.children[0].src = base_url + "assets/web/images/gallery_img/" + new_num + ".png";
+                currentImage.children[0].src = base_url + "assets/web/images/gallery_img/" + new_num + ".webp";
                 next_btn.disabled = false; // Enable the "Next" button
             } else {
                 prev_btn.disabled = true; // Disable the "Previous" button
@@ -37,7 +37,7 @@ gallery_images.forEach(img => {
         next_btn.addEventListener("click", function (event) {
             let new_num = dataValue + 1;
             if (new_num <= gallery_images.length) {
-                currentImage.children[0].src = base_url + "assets/web/images/gallery_img/" + new_num + ".png";
+                currentImage.children[0].src = base_url + "assets/web/images/gallery_img/" + new_num + ".webp";
                 prev_btn.disabled = false; // Enable the "Previous" button
             } else {
                 next_btn.disabled = true; // Disable the "Next" button
