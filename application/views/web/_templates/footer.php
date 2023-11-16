@@ -280,6 +280,7 @@
       success: function(response) {
         if (response.status) {
           $("#work_with_us_form")[0].reset()
+          $(".file_name_class").html('')
           Swal.fire({
             text: response.message,
             icon: "success"

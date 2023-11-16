@@ -171,7 +171,10 @@ class Blogs extends Admin_Controller
                         if ($this->upload->do_upload($field_name)) {
                             $uploaded_files[$field_name] = $this->upload->data()['file_name'];
                         } else {
+                            $delete_blog = $this->blog_model->delete_blog($insert_id);
                             $this->session->set_flashdata('message', ['0', 'Only imgages allowed and sshould not be greater than 50 kb.']);
+                            redirect('admin/blogs/add_blog', 'refresh');
+                            exit();
                         }
                     }
                 };
