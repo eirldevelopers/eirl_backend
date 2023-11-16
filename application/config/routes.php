@@ -73,4 +73,3 @@ $route['add_blog'] = 'admin/blogs/add_blog';
 $route['add_blog'] = 'admin/blogs/add_blog';
 $route['edit_blog/(:num)'] = 'admin/blogs/edit_blog/$1';
 $route['delete_blog'] = 'admin/blogs/delete_blog';
-

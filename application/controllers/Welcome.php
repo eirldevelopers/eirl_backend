@@ -20,6 +20,7 @@ class Welcome extends Public_Controller
 		$this->data['blogs'] = $this->welcome_model->get_blogs();
 		$this->template->public_render('web/index', $this->data);
 	}
+
 	public function load_about()
 	{
 		$this->data['css'] = ['style.css', 'about.css'];
