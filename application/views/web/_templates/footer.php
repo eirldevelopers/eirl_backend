@@ -124,7 +124,7 @@
   <div class="ei-talkto-us offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="ei-talkto-us-head offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasRightLabel">Talk to us</h5>
-      <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close"><img src="<?php echo base_url('assets/web/images/cross.png') ?>" alt=""></button>
+      <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close"><img src="<?php echo base_url('assets/web/images/cross.webp') ?>" alt=""></button>
     </div>
     <div class="ei-talkto-us-body offcanvas-body">
       <form id="talk_to_us_form" enctype="multipart/form-data">
