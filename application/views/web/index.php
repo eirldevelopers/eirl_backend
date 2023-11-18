@@ -1,5 +1,7 @@
 <div class="mobile-logo fixed-top ">
   <a href="<?php echo base_url('home') ?>"><img src="<?php echo base_url('assets/web/images/logo.png') ?>" alt=""></a>
+  <div class="mobile-navbar-options">
+  <a target="_blank" href="https://wa.me/919516703294"><img class="mob-whatsapp-nav-img" src="<?php echo base_url('assets/web/images/whatsapp.webp') ?>" alt="whatsapp"></a>
   <div class="dropdown">
     <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="<?php echo base_url('assets/web/images/hamburger.png') ?>" class="hamburger_image" style="height:30px" />
     </button>
@@ -9,6 +11,8 @@
       <li><a class="dropdown-item" href="<?php echo base_url('return_policy') ?>">Return Policy</a></li>
     </ul>
   </div>
+  </div>
+
 </div>
 <section class="ei-section-1 container">
   <video autoplay muted loop id="myVideo">
@@ -293,6 +297,7 @@
     </div>
     <div class="ei-contact-body row">
       <div class="col-lg-4 col-md-4 col-sm-12">
+        <a class="index-contact-card" target="_blank" href="https://maps.app.goo.gl/HpaBqkhpoB4F5V7Q9">
         <div class="ei-contact-body-card card-1">
           <div class="card-data-1">
             <b>
@@ -306,8 +311,10 @@
             <p>So come say Hi at 2004/C, Scheme No 14, Vijay Nagar, Near SBI Chowk, Jabalpur, Madhya Pradesh 482002</p>
           </div>
         </div>
+        </a>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12">
+      <a class="index-contact-card" target="_blank" href="https://wa.me/919516703294">
         <div class="ei-contact-body-card card-2">
           <div class="card-data-1">
             <b>
@@ -318,12 +325,13 @@
           </div>
           <div class="card-data-2">
             <p>Live far away?<br>Just WhatsApp at</p>
-            <a href="https://wa.me/919516703294">+91 9516703294</a>
-            <!-- <p>45632145283,<br>52436544254</p> -->
+            <p>+91 9516703294</p>
           </div>
         </div>
+        </a>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12">
+      <a class="index-contact-card" href="tel:919516703294">
         <div class="ei-contact-body-card card-3">
           <div class="card-data-1">
             <b>
@@ -334,9 +342,10 @@
           </div>
           <div class="card-data-2">
             <p>Say hello to our<br>communications team on</p>
-            <a href="tel:919516703294">+91 9516703294</a>
+            <p>+91 9516703294</p>
           </div>
         </div>
+      </a>
       </div>
     </div>
     <div class="ei-contact-foot">

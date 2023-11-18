@@ -21,6 +21,9 @@
         <li class="nav-item">
           <a class="nav-link <?php echo $this->router->fetch_method() == 'load_talk_to_us' ? 'bottom-bar-active' : '' ?>" data-bs-toggle="offcanvas" href="#offcanvasRight" role="button" aria-controls="offcanvasRight">Talk to Us</a>
         </li>
+        <li class="nav-item">
+          <a target="_blank" href="https://wa.me/919516703294"><img class="whatsapp-nav-img" src="<?php echo base_url('assets/web/images/whatsapp.webp') ?>" alt="whatsapp"></a>
+        </li>
       </ul>
     </div>
   </div>
@@ -52,6 +55,9 @@ if ($this->router->fetch_method() == 'index') {
           <li class="nav-item">
             <a class="nav-link <?php echo $this->router->fetch_method() == 'load_talk_to_us' ? 'active' : '' ?>" data-bs-toggle="offcanvas" href="#offcanvasRight" role="button" aria-controls="offcanvasRight">Talk to Us</a>
           </li>
+          <li class="nav-item">
+            <a target="_blank" href="https://wa.me/919516703294"><img class="whatsapp-nav-img" src="<?php echo base_url('assets/web/images/whatsapp.webp') ?>" alt="whatsapp"></a>
+          </li>
         </ul>
       </div>
     </div>
@@ -81,6 +87,9 @@ if ($this->router->fetch_method() == 'index') {
           </li>
           <li class="nav-item">
             <a class="nav-link <?php echo $this->router->fetch_method() == 'load_talk_to_us' ? 'active' : '' ?>" data-bs-toggle="offcanvas" href="#offcanvasRight" role="button" aria-controls="offcanvasRight">Talk to Us</a>
+          </li>
+          <li class="nav-item">
+            <a target="_blank" href="https://wa.me/919516703294"><img class="whatsapp-nav-img" src="<?php echo base_url('assets/web/images/whatsapp.webp') ?>" alt="whatsapp"></a>
           </li>
         </ul>
       </div>

@@ -103,7 +103,7 @@
           </div>
           <div class="foot-address">
             <img class="phone-foot-img" src="<?php echo base_url('assets/web/images/footer/phone.png') ?>" alt="">
-            <p>+91 9516703294</p>
+            <a class="index-contact-card" href="tel:919516703294">+91 9516703294</a>
           </div>
         </div>
       </div>

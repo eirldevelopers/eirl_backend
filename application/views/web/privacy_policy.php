@@ -1,7 +1,9 @@
 <div class="mobile-logo fixed-top ">
   <a href="<?php echo base_url('home') ?>"><img src="<?php echo base_url('assets/web/images/logo.png') ?>" alt=""></a>
+  <div class="mobile-navbar-options">
+  <a target="_blank" href="https://wa.me/919516703294"><img class="mob-whatsapp-nav-img" src="<?php echo base_url('assets/web/images/whatsapp.webp') ?>" alt="whatsapp"></a>
   <div class="dropdown">
-    <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="<?php echo base_url('assets/web/images/hamburger.png') ?>" class="hamburger_image" style="height:30px"/>
+    <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="<?php echo base_url('assets/web/images/hamburger.png') ?>" class="hamburger_image" style="height:30px" />
     </button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="<?php echo base_url('privacy_policy') ?>">Privacy Policy</a></li>
@@ -9,6 +11,8 @@
       <li><a class="dropdown-item" href="<?php echo base_url('return_policy') ?>">Return Policy</a></li>
     </ul>
   </div>
+  </div>
+
 </div>
 <section class="ei-about-section">
   <div class="ei-about-div container">
